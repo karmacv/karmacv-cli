@@ -31,6 +31,13 @@ lib.preFlow(function(err, results) {
     });
 
   program
+    .command('init-test')
+    .description('Initialize a resume.json file for e2e tests.')
+    .action(function() {
+      lib.initTest()
+    });
+
+  program
     .command('test')
     .description('Schema validation test your resume.json')
     .action(function() {

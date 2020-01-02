@@ -1,0 +1,236 @@
+{
+    "basics": {
+        "name": "8b6e068a-7043-4ab3-bd67-f5583c2ab61a",
+        "label": "e6a455b1-fa52-4186-9aaf-07b110119126",
+        "picture": "caef81b5-7184-49d8-adcf-f7bee7c3bac2",
+        "email": "a5727fef-ba74-443f-899e-25b5b7c4dd6a",
+        "phone": "71d616f6-61af-4ca5-aa1e-bc3a5cc4b191",
+        "website": "55875ff8-ab92-441b-9184-d4af6aa74ed1",
+        "websiteExpl": "51c009b3-8111-4039-83bf-3dcd83c1acf4",
+        "summary": "f1d28839-7e21-4645-bd70-69bc91183ee1",
+        "location": {
+            "address": "fbbd9506-cf0c-4976-bdc9-71f7f9a075d4",
+            "postalCode": "35aa2617-1e19-402f-be0e-b8d68508352e",
+            "city": "84a6f698-8b02-4a25-85f0-35572034cc34",
+            "countryCode": "fe3f3ad0-cf78-4e12-bf7c-609530288079",
+            "region": "a58ff6de-8c84-4c1b-9a48-ad607c47b75f"
+        },
+        "profiles": [
+            {
+                "network": "11713580-e9da-4e85-add5-df2c7891c400",
+                "username": "c2388164-2409-43b9-9a3c-8cf43844ce47",
+                "url": "c977881d-30d4-4cb3-b4ab-5487207903ee"
+            },
+            {
+                "network": "9d7df952-7439-4970-9da9-f3a5bc1f1cd7",
+                "username": "baca9cba-736e-4085-87d0-0550d7faaec9",
+                "url": "91882e18-3b69-4157-8855-1f0262f6ba4d"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "a22261dc-945b-4155-93a9-4e231295bb4f",
+            "position": "fe205e77-ce40-4dd8-8139-0cfb58fe21e9",
+            "website": "9e972c0d-7317-4ee3-88e0-7c0222058045",
+            "startDate": "25e0d4ae-96bd-4649-ae4f-c7ce43f26513",
+            "endDate": "a1bc5c3a-82de-4dba-bef4-112b5f50a04f",
+            "summary": "25df08af-b269-4488-8764-4c449aa3af53",
+            "highlights": [
+                "114d91d4-2a51-48bf-8bb3-927ee44512c5",
+                "2676fbbd-e862-453e-91bf-ee55d727f7bc",
+                "447814ec-5c0d-4574-b17a-8005e42841c2"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "600ec717-f2eb-4dca-a553-30a4d5e11cd4",
+            "position": "478bf549-ea2a-4a51-9b3e-07ba4e1622e2",
+            "website": "3e4071b3-f83b-4841-8851-05f9609b0a4a",
+            "startDate": "32aa8d13-68f1-4cf9-9472-b71ef0fd6d6a",
+            "endDate": "7db09044-6329-4208-a453-821de8dede5d",
+            "summary": "36d2ebdd-06ae-449c-9e7b-167ed511bb2b",
+            "highlights": [
+                "86cf2ad0-bf7f-4f45-82ac-b7d8ec690e46"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "84c03fcf-d0ec-457a-81c9-a91e187e53c2",
+            "area": "c0073833-3577-4ff7-935d-65727742c411",
+            "studyType": "53ef7b7f-730d-48d5-9174-3621218d46f0",
+            "startDate": "7bed1269-0f1d-43c6-a522-beb407e529c3",
+            "endDate": "1249d033-2958-4517-ad28-144e351db242",
+            "gpa": "84133763-57ac-4d67-b7a0-fdfa307f8a58",
+            "courses": [
+                "8731377b-326d-4adf-960e-16ce731ab0f7",
+                "4f07c3d6-804e-45f9-9326-ed1a15bd4c55"
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "328aef11-5019-4bfc-96b1-85a662ccebc9",
+            "date": "6369da6a-9457-4802-8b61-dec7db0fb8b1",
+            "awarder": "d487cd93-5e3f-4780-be86-38798bbb6c16",
+            "summary": "2e219f5d-be6d-4a8e-801b-59ae2c2a858f"
+        }
+    ],
+    "publications": [
+        {
+            "name": "8306480b-42fe-4230-a561-abd609df320c",
+            "publisher": "2b9744cf-d133-4cda-a1af-529c039e00a9",
+            "releaseDate": "1fe822a3-c421-46eb-a163-c60c9ad264ef",
+            "website": "0bd3ed49-2752-44ee-84f7-97a5bc3818d9",
+            "summary": "30e10196-ce4f-4528-b268-73d2af0d81d7"
+        }
+    ],
+    "skills": [
+        {
+            "name": "14f687e6-0199-40a2-b925-72f3d3cbd505",
+            "level": "bd691367-2431-4869-b52f-395267619902",
+            "keywords": [
+                "9d342418-8cb7-4aaf-abf3-c5fdda39e64d",
+                "5c241df9-6b0e-4781-bd4c-c59bb99d410d",
+                "393c89ef-d23c-4a67-ba3c-c9282f9ef3de"
+            ]
+        },
+        {
+            "name": "eaccb31b-df4d-4593-b885-e7c1cbf6665c",
+            "level": "3791bd3d-1863-4e0d-b860-b555bb7affe3",
+            "keywords": [
+                "35fd35f4-8c4d-4cad-86b6-2434c8b6c10a",
+                "34eef924-d426-4c5b-af85-a8630f90998e",
+                "df79b7c9-9c8f-414e-990e-9033b22333bb"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "957d957e-fe01-4b87-96e7-e54fda3e9fe6",
+            "fluency": "a638e17d-8994-48ed-8d9d-75832df9160a"
+        }
+    ],
+    "interests": [
+        {
+            "name": "690dc259-1d0d-4822-8b9b-f1da023fd9e6",
+            "keywords": [
+                "470f6e9e-0aeb-4d68-9e93-f51ec5772804",
+                "dda738a1-91e2-42f1-98bc-aa648e1e5e65"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "c20fb550-9a7c-4ab9-9ffd-d1d3c00e4513",
+            "reference": "6e0d0c66-2781-487a-a4d8-5fa50bb0d9bf"
+        }
+    ],
+    "documents": [
+        {
+            "filename": "d7c35cf1-0b51-4942-a72c-f7c81384d5c7",
+            "filenameExpl": "dc4210ae-648a-4f6f-9321-9c3052b3a5bb",
+            "url": "d0cd8677-76d6-4f01-b8a5-0f53d4b11273",
+            "urlExpl": "4d7b903c-837d-47e1-881c-8e74ac526826",
+            "tags": [
+                "aeafba11-1520-4c3e-9a36-3ebcc5ef5383",
+                "d2f08057-08f8-4baa-a34c-2c2496f2c051"
+            ],
+            "tagsExpl": "41fa8b2c-56f3-4c38-af49-3923be6109d9",
+            "description": "da533059-4ed9-4086-bede-b434f5519d14",
+            "descriptionExpl": "8cbec510-4337-471c-9d87-c1077bdb8328"
+        }
+    ],
+    "settings": {
+        "labels": {
+            "resume": {
+                "basics": "39111ea6-484c-42ed-90a5-f5236a2a60ec",
+                "work": "e57b4ad9-2e4f-4e55-9bdc-86c4155bff2b",
+                "volunteer": "3e0c22ba-4709-47c5-b12a-31770d98e8b6",
+                "education": "3bd94999-e3ea-43af-97b5-f2e4917aa940",
+                "awards": "c89ff810-bf41-4dce-b415-617f010a9136",
+                "publications": "c81ede44-6db5-4fe9-a8fa-84f6347678f5",
+                "skills": "4acea9c0-3a7f-434f-97d9-0c5ee04f8f02",
+                "languages": "799d6902-1a49-43bf-ab59-357419a94125",
+                "interests": "9020ba44-81a9-4dd1-8529-7c9ca3476ec3",
+                "references": "25f7829e-5c3a-48ce-804b-13806c9a7b5f",
+                "documents": "331e9da6-80fa-4853-acc5-37699beb9016"
+            },
+            "basics": {
+                "name": "99b655a4-cb9d-4d86-809f-55692bd49d22",
+                "label": "2f645b47-21fc-4c35-9ab4-3cc24537e305",
+                "picture": "37ae643a-d73a-4241-8f37-1e4ccf197491",
+                "email": "8e2bec81-5f80-4cf7-93b1-78bdad38308f",
+                "phone": "1d417665-de5a-4641-a5cf-a159077bd9f4",
+                "website": "e9a2d71e-5290-4fa2-bbed-852cd5faec27",
+                "summary": "ede6182a-361f-42a0-b51f-c8e67a22ca02",
+                "location": "dee8c7d3-569a-41d8-b69b-f850c29fa7b9",
+                "profiles": "cc0586dc-05a9-450a-b1fa-0dd619896b73"
+            },
+            "profile": {
+                "network": "0c4c8753-efd2-4117-8a59-6ae73bbbbe64",
+                "username": "f02f9df1-cc5e-4a50-89d8-c4672fb76d06",
+                "url": "cce75f3d-6c7e-4471-b146-04cf15d2b15c"
+            },
+            "location": {
+                "address": "d3c081cf-acbe-4e2a-8d67-03e1e83c8167",
+                "postalCode": "d6598f95-10c2-42c5-9e91-a206fa4241d5",
+                "city": "f9e05b7a-0a96-452f-8112-e70c943375d2",
+                "countryCode": "1e5ccaab-1892-4d9e-8010-581f57ecf5bf",
+                "region": "349562ce-1d02-4d52-a453-93571f266884"
+            },
+            "award": {
+                "title": "25636d55-bf83-44f1-9380-4d63f8648e9e",
+                "date": "b45e7a60-9306-4750-bb27-14361153d96b",
+                "awarder": "34fa8aab-f4d1-406e-8c4a-c912a260f59e",
+                "summary": "b758a610-f058-4f7b-a671-5bb04aea9828"
+            },
+            "document": {
+                "filename": "34955998-4d6a-4255-9750-aac9780e49d2",
+                "url": "4e466524-05f7-4ee4-bdb7-70a107a763f9",
+                "tags": "6a19e204-9325-40a2-833f-030fc85e7a35",
+                "description": "56c2e2ae-ebcf-4df1-a441-65cfe4c4a924"
+            },
+            "interest": {
+                "name": "07bdd2af-6d4f-4718-b300-b9987f52c6a7",
+                "keywords": "88f29d12-3298-4d90-9db8-0a1ec55323c4"
+            },
+            "language": {
+                "name": "62f0b896-5233-4a62-a91c-27f5fa69a9d1",
+                "level": "db7f0f64-2160-48e4-9851-f0e4ff6da522"
+            },
+            "publication": {
+                "name": "d08e580a-5615-4ad8-916f-77f2813b648e",
+                "publisher": "1dba442b-0afb-422c-8603-c6b461c9754a",
+                "releaseDate": "b9df845b-8391-4173-8244-66db8750cebc",
+                "website": "0477af12-3d04-4028-8c2f-4688e3a30e1b",
+                "summary": "d6bd8b9c-be87-4aa3-a824-2320ff3c532f"
+            },
+            "skill": {
+                "name": "9d10eafe-409a-4496-8e91-d07eb1e6de34",
+                "level": "4a763ef8-22b0-48f9-b2a8-aa84040fd89d",
+                "keywords": "4ca98068-0d7e-4933-b24a-1c355c41ef87"
+            },
+            "volunteer": {
+                "organization": "2639de35-4dee-4ed6-92c5-c59ac1c67910",
+                "position": "c7ef836d-d10b-41a9-8634-99ee5784d16b",
+                "website": "25119025-04e1-4ec6-9232-41311a3891f6",
+                "startDate": "ee2521fa-63b6-40ac-a952-67c516262f76",
+                "endDate": "c1db6332-69cd-4592-b35a-154273c4ed25",
+                "summary": "0fae15f9-0d79-40a4-ad68-8e2b9acaacf8",
+                "highlights": "c6321497-02ff-4ef5-927d-556cba9fe2ee"
+            },
+            "work": {
+                "company": "f9b32b72-0531-4939-86c4-444bf0201bca",
+                "position": "35b3effa-8e13-4391-827a-55f36f8f628b",
+                "website": "cfc9f75a-8a8a-45ff-9030-15ac19d975ce",
+                "startDate": "df47a204-9c86-48b7-ab8e-ee1e5bcca3a9",
+                "endDate": "168bed46-b994-45d6-8678-66ab70432c89",
+                "summary": "fb664f7a-04b2-486b-bce6-6d6350bf317a",
+                "highlights": "26832dd5-bc1e-421f-9373-dec430d5aef9"
+            }
+        }
+    }
+}

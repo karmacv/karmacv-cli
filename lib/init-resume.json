@@ -1,11 +1,12 @@
 {
 	"basics": {
-		"name": "test",
+		"name": "John Doe",
 		"label": "Programmer",
 		"picture": "",
-		"email": "test4@test.com",
+		"email": "john.doe@doehost.com",
 		"phone": "(912) 555-4321",
-		"website": "http://richardhendricks.com",
+		"website": "http://johndoe-dummy.com",
+		"websiteExpl": "Website",
 		"summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
 		"location": {
 			"address": "2712 Broadway St",
@@ -126,5 +127,107 @@
 			"name": "Erlich Bachman",
 			"reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
 		}
-	]
+	],
+	"documents": [
+		{
+			"filename": "document-1.pdf",
+			"filenameExpl": "Filename",
+			"url": "https://download-dummy.org/document-1.pdf",
+			"urlExpl": "URL",
+			"tags": ["CV", "Bio"],
+			"tagsExpl": "Tags",
+			"description": "PDF version of my resume.",
+			"descriptionExpl": "Description"
+		}
+	],
+	"settings": {
+		"labels": {
+			"resume": {
+				"basics": "Basics",
+				"work": "Work",
+				"volunteer": "Volunteer",
+				"education": "Education",
+				"awards": "Awards",
+				"publications": "Publications",
+				"skills": "Skills",
+				"languages": "Languages",
+				"interests": "Interests",
+				"references": "References",
+				"documents": "Documents"
+			},
+			"basics": {
+				"name": "Name",
+				"label": "Label",
+				"picture": "Picture",
+				"email": "Email",
+				"phone": "Phone",
+				"website": "Website",
+				"summary": "Summary",
+				"location": "Location",
+				"profiles": "Profiles"
+			},
+			"profile": {
+				"network": "Network",
+				"username": "Username",
+				"url": "URL"
+			},
+			"location": {
+				"address": "Address",
+				"postalCode": "PostalCode",
+				"city": "City",
+				"countryCode": "Country code",
+				"region": "Region"
+			},
+			"award": {
+				"title": "Title",
+				"date": "Date",
+				"awarder": "Awarder",
+				"summary": "Summary"
+			},
+			"document": {
+				"filename": "Filename",
+				"url": "URL",
+				"tags": "Tags",
+				"description": "Description"
+			},
+			"interest": {
+				"name": "Name",
+				"keywords": "Keywords"
+			},
+			"language": {
+				"name": "Name",
+				"level": "Level"
+			},
+			"publication": {
+				"name": "Name",
+				"publisher": "Publisher",
+				"releaseDate": "ReleaseDate",
+				"website": "Website",
+				"summary": "Summary"
+			},
+			"skill": {
+				"name": "Name",
+				"level": "Level",
+				"keywords": "Keywords"
+			},
+			"volunteer": {
+				"organization": "Organization",
+				"position": "Position",
+				"website": "Website",
+				"startDate": "StartDate",
+				"endDate": "EndDate",
+				"summary": "Summary",
+				"highlights": "Highlights"
+			},
+			"work": {
+				"company": "Company",
+				"position": "Position",
+				"website": "Website",
+				"startDate": "StartDate",
+				"endDate": "EndDate",
+				"summary": "Summary",
+				"highlights": "Highlights"
+			}
+		}
+	}
 }
