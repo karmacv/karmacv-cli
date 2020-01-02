@@ -13,18 +13,18 @@ This is the command line tool for [JSON Resume](https://jsonresume.org), the ope
 Install the command-line tool:
 
 ```
-npm install -g resume-cli
+npm install -g kcv-cli
 ```
 
 
 # Usage
 
-## `resume --help`
+## `kcv --help`
 
 Show a list of options and commands for the <abbr title="Command Line Interface">CLI</abbr>.
 
 
-## `resume init`
+## `kcv init`
 
 Creates a new `resume.json` file in your current working directory.
 
@@ -32,15 +32,15 @@ Complete the `resume.json` with your text editor. Be sure to follow the schema
 (available at http://jsonresume.org).
 
 
-## `resume test`
+## `kcv test`
 
 Validates your `resume.json` against our schema tests to ensure it complies with 
 the standard. Tries to identify where any errors may be occurring.
 
 
-## `resume export [fileName]`
+## `kcv export [fileName]`
 
-Exports your resume locally in a stylized HTML, Markdown, or PDF format.
+Exports your karmacv locally in a stylized HTML, Markdown, or PDF format.
 
 A list of available themes can be found here: http://jsonresume.org/themes/
 
@@ -50,7 +50,7 @@ Options:
   - `--format <file type>` Example: `--format pdf`
   - `--theme <name>` Example: `--theme flat`  
 
-## `resume serve`
+## `kcv serve`
 
 Starts a web server that serves your local `resume.json`.  
 
