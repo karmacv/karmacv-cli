@@ -32,9 +32,10 @@ lib.preFlow(function(err, results) {
 
   program
     .command('init-test')
-    .description('Initialize a resume.json file for e2e tests.')
+    .description('Initialize a resume-testing.json file for testing purpose.')
     .action(function() {
       lib.initTest()
+      process.exit();
     });
 
   program
