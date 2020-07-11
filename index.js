@@ -16,7 +16,6 @@ lib.preFlow(function(err, results) {
   program
     .usage("[command] [options]")
     .version(pkg.version)
-    .option('-t, --theme <theme name>', 'Specify theme used by `export` (modern, crisp, flat: default)', 'flat')
     .option('-f, --format <file type extension>', 'Used by `export`.')
     .option('-r, --resume <resume filename>', 'Used by `serve` (default: resume.json)', path.join(process.cwd(), 'resume.json'))
     .option('-p, --port <port>', 'Used by `serve` (default: 4000)', 4000)
@@ -60,7 +59,7 @@ lib.preFlow(function(err, results) {
     .command('serve')
     .description('Serve resume at http://localhost:4000/')
     .action(function() {
-      lib.serve(program.port, program.theme, program.silent, program.dir, program.resume);
+      lib.serve(program.port, program.silent, program.dir, program.resume);
     });
 
   program.parse(process.argv);
@@ -70,12 +69,12 @@ lib.preFlow(function(err, results) {
   });
 
   if (!program.args.length) {
-    console.log('resume-cli:'.cyan, 'https://jsonresume.org', '\n');
+    console.log('karmacv-cli:'.cyan, 'https://karmacv.io', '\n');
     program.help();
 
   } else if (validCommands.indexOf(process.argv[2]) === -1) {
     console.log('Invalid argument:'.red, process.argv[2]);
-    console.log('resume-cli:'.cyan, 'https://jsonresume.org', '\n');
+    console.log('karmacv-cli:'.cyan, 'https://karmacv.io', '\n');
     program.help();
   }
 });
