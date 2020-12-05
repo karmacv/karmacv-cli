@@ -1,231 +1,200 @@
 {
-	"basics": {
-	  "name": "John Doe",
-	  "label": "Programmer",
-	  "picture": "",
-	  "email": "john.doe@doehost.com",
-	  "phone": "(912) 555-4321",
-	  "website": "http://johndoe-dummy.com",
-	  "websiteExpl": "Website",
-	  "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
-	  "location": {
-		"address": "2712 Broadway St",
-		"postalCode": "CA 94115",
-		"city": "San Francisco",
-		"countryCode": "US",
-		"region": "California"
-	  },
-	  "profiles": [
-		{
-		  "network": "Twitter",
-		  "username": "neutralthoughts",
-		  "url": ""
-		},
-		{
-		  "network": "SoundCloud",
-		  "username": "dandymusicnl",
-		  "url": "https://soundcloud.com/dandymusicnl"
-		}
-	  ]
-	},
-	"work": [
-	  {
-		"company": "Pied Piper",
-		"position": "CEO/President",
-		"website": "http://piedpiper.com",
-		"startDate": "2013-12-01",
-		"endDate": "2014-12-01",
-		"summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
-		"highlights": [
-		  "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
-		  "Successfully won Techcrunch Disrupt",
-		  "Optimized an algorithm that holds the current world record for Weisman Scores"
-		]
-	  }
-	],
-	"volunteer": [
-	  {
-		"organization": "CoderDojo",
-		"position": "Teacher",
-		"website": "http://coderdojo.com/",
-		"startDate": "2012-01-01",
-		"endDate": "2013-01-01",
-		"summary": "Global movement of free coding clubs for young people.",
-		"highlights": [
-		  "Awarded 'Teacher of the Month'"
-		]
-	  }
-	],
-	"education": [
-	  {
-		"institution": "University of Oklahoma",
-		"area": "Information Technology",
-		"studyType": "Bachelor",
-		"startDate": "2011-06-01",
-		"endDate": "2014-01-01",
-		"gpa": "4.0",
-		"courses": [
-		  "DB1101 - Basic SQL",
-		  "CS2011 - Java Introduction"
-		]
-	  }
-	],
-	"awards": [
-	  {
-		"title": "Digital Compression Pioneer Award",
-		"date": "2014-11-01",
-		"awarder": "Techcrunch",
-		"summary": "There is no spoon."
-	  }
-	],
-	"publications": [
-	  {
-		"name": "Video compression for 3d media",
-		"publisher": "Hooli",
-		"releaseDate": "2014-10-01",
-		"website": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
-		"summary": "Innovative middle-out compression algorithm that changes the way we store data."
-	  }
-	],
-	"skills": [
-	  {
-		"name": "Web Development",
-		"level": "Master",
-		"keywords": [
-		  "HTML",
-		  "CSS",
-		  "Javascript"
-		]
-	  },
-	  {
-		"name": "Compression",
-		"level": "Master",
-		"keywords": [
-		  "Mpeg",
-		  "MP4",
-		  "GIF"
-		]
-	  }
-	],
-	"languages": [
-	  {
-		"language": "English",
-		"fluency": "Native speaker"
-	  }
-	],
-	"interests": [
-	  {
-		"name": "Wildlife",
-		"keywords": [
-		  "Ferrets",
-		  "Unicorns"
-		]
-	  }
-	],
-	"references": [
-	  {
-		"name": "Erlich Bachman",
-		"reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
-	  }
-	],
-	"settings": {
-	  "labels": {
-		"general": {
-		  "present": "Present",
-		  "startDate": "Start date",
-		  "endDate": "End date"
-		},
-		"categories": {
-		  "basics": "Basics",
-		  "work": "Work",
-		  "volunteer": "Volunteer",
-		  "education": "Education",
-		  "awards": "Awards",
-		  "publications": "Publications",
-		  "skills": "Skills",
-		  "languages": "Languages",
-		  "interests": "Interests",
-		  "references": "References",
-		  "documents": "Documents",
-		  "location": "Location",
-		  "profile": "Profiles"
-		},
-		"basics": {
-		  "name": "Name",
-		  "label": "Label",
-		  "picture": "Picture",
-		  "email": "Email",
-		  "phone": "Phone",
-		  "website": "Website",
-		  "summary": "Summary",
-		  "location": "Location",
-		  "profiles": "Profiles"
-		},
-		"profile": {
-		  "network": "Network",
-		  "username": "Username",
-		  "url": "URL"
-		},
-		"location": {
-		  "address": "Address",
-		  "postalCode": "PostalCode",
-		  "city": "City",
-		  "countryCode": "Country code",
-		  "region": "Region"
-		},
-		"award": {
-		  "title": "Title",
-		  "date": "Date",
-		  "awarder": "Awarder",
-		  "summary": "Summary"
-		},
-		"document": {
-		  "filename": "Filename",
-		  "url": "URL",
-		  "tags": "Tags",
-		  "description": "Description"
-		},
-		"interest": {
-		  "name": "Name",
-		  "keywords": "Keywords"
-		},
-		"language": {
-		  "name": "Name",
-		  "level": "Level"
-		},
-		"publication": {
-		  "name": "Name",
-		  "publisher": "Publisher",
-		  "releaseDate": "Release date",
-		  "website": "Website",
-		  "summary": "Summary"
-		},
-		"skill": {
-		  "name": "Name",
-		  "level": "Level",
-		  "keywords": "Keywords"
-		},
-		"volunteer": {
-		  "organization": "Organization",
-		  "position": "Position",
-		  "website": "Website",
-		  "summary": "Summary",
-		  "highlights": "Highlights"
-		},
-		"education": {
-		  "institution": "Intitution",
-		  "area": "Area",
-		  "studyType": "Study type",
-		  "gpa": "GPA",
-		  "courses": "Courses"
-		},
-		"work": {
-		  "company": "Company",
-		  "position": "Position",
-		  "website": "Website",
-		  "summary": "Summary",
-		  "highlights": "Highlights"
-		}
-	  }
-	}
-  }
+    "id": "d7386ec7-a033-458e-b771-60165927a89b",
+    "created": "2020-07-16T10:37:28",
+    "updated": "2020-07-16T10:37:28",
+    "privacyMode": "CLOSED",
+    "visibleLink": null,
+    "basics": {
+        "id": "8c20e116-c054-4190-b98f-677c1c977b18",
+        "email": "elmar@gmail.com",
+        "label": "Superduper e",
+        "name": "Elmar-kam",
+        "phone": "016099154046",
+        "summary": null,
+        "website": null,
+        "updated": "2020-07-16T15:58:41+02:00"
+    },
+    "work": [],
+    "volunteer": [],
+    "education": [],
+    "awards": [],
+    "publications": [],
+    "skills": [],
+    "languages": [],
+    "interests": [],
+    "references": [],
+    "projects": [],
+    "certificates": [],
+    "documents": [],
+    "themeName": "karmacv-theme-retro",
+    "settings": {
+        "id": "8f23c6f3-f9ec-48aa-8b4b-56be6cb55dd5",
+        "created": null,
+        "updated": null,
+        "categoryKeys": {
+            "id": "fc1d35e5-9378-402b-a26c-863e0c649eaf",
+            "created": null,
+            "updated": null,
+            "work": "WORK",
+            "skill": "SKILL",
+            "volunteer": "VOLUNTEER",
+            "publication": "PUBLICATION",
+            "reference": "REFERENCE",
+            "profile": "PROFILE",
+            "location": "LOCATION",
+            "language": "LANGUAGE",
+            "certificate": "CERTIFICATION",
+            "award": "AWARD",
+            "interest": "INTEREST",
+            "project": "PROJECT"
+        },
+        "categoryVisibility": {
+            "id": "79cb12cd-00c1-4173-beae-210cd6480b02",
+            "created": null,
+            "updated": null,
+            "work": true,
+            "skill": true,
+            "volunteer": false,
+            "publication": false,
+            "reference": true,
+            "profile": false,
+            "location": true,
+            "language": false,
+            "certificate": false,
+            "award": false,
+            "interest": false,
+            "project": false
+        },
+        "labels": {
+            "id": "ba3f21b1-18bc-475f-8f23-0aab6844f201",
+            "created": null,
+            "updated": null,
+            "general": {
+                "id": "f6bf6914-6911-4c27-8d85-d53a3a81bc1e",
+                "created": null,
+                "updated": null,
+                "present": "Bis heute",
+                "startDate": "Beginn",
+                "endDate": "Ende"
+            },
+            "basics": {
+                "id": "98c7a782-a092-47e9-a865-9dfc59792463",
+                "categoryTitle": "Allgemein",
+                "name": "Name",
+                "label": "Lebenslauf-Titel",
+                "picture": "Bild",
+                "email": "E-Mail Adresse",
+                "phone": "Telefonnummer",
+                "website": "Website",
+                "summary": "Über mich",
+                "location": null,
+                "profiles": null
+            },
+            "profile": {
+                "id": "52bab962-046d-453d-91f7-63aca3a517c1",
+                "categoryTitle": "Profil",
+                "network": "Netzwerk",
+                "username": "Nutzername",
+                "url": "URL"
+            },
+            "location": {
+                "id": "e17818b0-26c8-46d5-a397-d24a69eb5d3f",
+                "categoryTitle": "Wohnort",
+                "address": "Adresse",
+                "postalCode": "Postleitzahl",
+                "city": "Stadt",
+                "countryCode": "Ländercode",
+                "region": "Bundesland"
+            },
+            "award": {
+                "id": "adc1ddbf-6bd8-4c63-8002-67444b585ab9",
+                "categoryTitle": "Auszeichnung",
+                "title": "Auszeichnung",
+                "date": "Überreicht am",
+                "awarder": "Preisträger",
+                "summary": "Zusammenfassung"
+            },
+            "education": {
+                "id": "e4875558-76c8-4846-8d7b-cd45fec79820",
+                "categoryTitle": "Erziehung",
+                "institution": "Institution",
+                "area": "Bereich",
+                "studyType": "Abschluss",
+                "gpa": "GPA",
+                "courses": "Kurse"
+            },
+            "interest": {
+                "id": "e46aa53b-9431-471f-9121-9f1971091192",
+                "categoryTitle": "Interessen",
+                "name": "Stichwörter",
+                "keywords": "Stichwörter"
+            },
+            "language": {
+                "id": "18864e96-4c8f-46db-85bf-79bc9ee6057f",
+                "categoryTitle": "Sprachen",
+                "name": "Bezeichnung",
+                "level": "Niveaustufe"
+            },
+            "publication": {
+                "id": "4da8d4d2-36a3-49c2-85fe-c8085fd769f7",
+                "categoryTitle": "Veröffentlichungen",
+                "name": "Bezeichnung",
+                "publisher": "Verlag",
+                "releaseDate": "Veröffentlichungsdatum",
+                "website": null,
+                "summary": "Zusammenfassung"
+            },
+            "reference": {
+                "id": "2c9a20a5-e987-4d48-8dc6-817b8637185b",
+                "categoryTitle": "Referenzen",
+                "name": "Bezeichnung",
+                "reference": "Referenz"
+            },
+            "skill": {
+                "id": "136df04a-095b-47d4-90b3-877eb9b8bb56",
+                "categoryTitle": "Fähigkeiten",
+                "name": "Bezeichnung",
+                "level": "Niveaustufe",
+                "keywords": "Stichwörter"
+            },
+            "volunteer": {
+                "id": "307bf65d-17dd-46ac-9f4f-da50206032ad",
+                "categoryTitle": "Freiwilligentätigkeit",
+                "organization": "Organisation",
+                "position": "Position/Rolle",
+                "website": "Webseite",
+                "summary": "Zusammenfassung",
+                "highlights": "Höhepunkte"
+            },
+            "work": {
+                "id": "da28796f-26d2-48f5-a331-e203aa729ff9",
+                "categoryTitle": "Arbeit",
+                "company": "Unternehmen",
+                "position": "THEME_LABEL_WORK_POSITION",
+                "website": "Website",
+                "summary": "Zusammenfassung",
+                "highlights": "Höhepunkte"
+            },
+            "project": {
+                "id": "02f361b7-56c4-4982-8927-306a21fb17e5",
+                "categoryTitle": "Projekte",
+                "title": "Bezeichnung",
+                "client": "Kunde",
+                "startDate": "Beginn",
+                "endDate": "Ende",
+                "website": "Webseite",
+                "summary": "Zusammenfassung",
+                "highlights": "Besonderheiten",
+                "roles": "Rolleen",
+                "products": "Produkte"
+            },
+            "certiticate": {
+                "id": "8bd4b107-12f4-481d-ad7b-d2a0b42173f8",
+                "categoryTitle": "Zertifikate",
+                "title": "Bezeichnung",
+                "issuer": "Zertifizierungsstelle",
+                "issueDate": "Erhalten am"
+            }
+        }
+    }
+}
