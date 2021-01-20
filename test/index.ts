@@ -1,5 +1,5 @@
-var builder = require('../lib/builder');
-var initResume = require('../lib/init-e2e');
+var builder = require('../core/builder');
+var initResume = require('../core/init-e2e');
 var assert = require('assert');
 var fs = require('fs');
 

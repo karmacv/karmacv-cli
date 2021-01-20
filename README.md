@@ -58,7 +58,7 @@ Options:
   - `--port <port>`
   - `--theme <name>`
 
-If no theme is specified, it will look for the file `index.js` and call 
+If no theme is specified, it will look for the file `compiler.service.ts` and call 
 `render()`. This is useful when developing themes.
 
 
