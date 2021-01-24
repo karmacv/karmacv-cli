@@ -1,8 +1,11 @@
+import 'reflect-metadata';
+
+import * as appRoot from 'app-root-path';
 import btoa from 'btoa';
 import { Observable } from 'rxjs';
-import { injectable } from 'tsyringe';
+import { autoInjectable, container } from 'tsyringe';
 
-import { UtilsService } from './utils.service';
+import { ConfigService } from './config.service';
 
 const themeServer = process.env.THEME_SERVER || 'https://themes.jsonresume.org/theme/';
 const registryServer = process.env.REGISTRY_SERVER || 'https://registry.jsonresume.org';
@@ -17,15 +20,13 @@ const puppeteer = require('puppeteer');
 
 const SUPPORTED_FILE_FORMATS = ['html', 'pdf'];
 
-@injectable()
+@autoInjectable()
 export class CompilerService {
-    constructor(private readonly utilsService: UtilsService) {}
-
     renderHtml(): Observable<string> {
         return new Observable((subscriber) => {
             try {
-                const resumeJson = this.utilsService.defaultJsonResume;
-                const themePkg = this.utilsService.themePkg;
+                const resumeJson = this.jsonResume;
+                const themePkg = this.themePkg;
                 const contents = themePkg.render(resumeJson);
                 return subscriber.next(contents);
             } catch (e) {
@@ -36,7 +37,7 @@ export class CompilerService {
 
     async createPdf(resumeJson: any, fileName: string): Promise<Buffer> {
         const html = await this.renderHtml().toPromise();
-        const themePkg = this.utilsService.themePkg;
+        const themePkg = this.themePkg;
         const puppeteerLaunchArgs = [];
 
         if (process.env.RESUME_PUPPETEER_NO_SANDBOX) {
@@ -58,5 +59,20 @@ export class CompilerService {
         });
         await browser.close();
         return pdf;
+    }
+
+    get themePkg(): any {
+        try {
+            const themePath = container.resolve(ConfigService).themePath;
+            return require(`${themePath}/index.js`);
+        } catch (err) {
+            // Theme not installed
+            console.log('No theme found in the current folder.');
+            process.exit();
+        }
+    }
+
+    get jsonResume(): string {
+        return JSON.parse(fs.readFileSync(`${appRoot}/resume.json`).toString());
     }
 }

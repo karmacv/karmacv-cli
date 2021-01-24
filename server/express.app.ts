@@ -4,6 +4,11 @@ const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
 import logSymbols from 'log-symbols';
+import { container } from 'tsyringe';
+
+import { ConfigService } from '../services/config.service';
+const connectLivereload = require('connect-livereload');
+const open = require('open');
 
 export class ExpressApp {
     private _app: Application;
@@ -14,14 +19,12 @@ export class ExpressApp {
         origin: '*',
     };
 
-    constructor(appInit: { port: number; middleWares: any; controllers: any }) {
-        const that = this;
+    constructor(port: number, controllers: any) {
         this._app = express();
-        this.port = appInit.port;
+        this.port = port;
         this._app.use(logger('dev'));
         this._app.use(express.urlencoded({ extended: false }));
-        this.middlewares(appInit.middleWares);
-        this.routes(appInit.controllers);
+        this.routes(controllers);
         this._app.use((err, req, res, next) => {
             // format error
             console.error(err);
@@ -30,15 +33,10 @@ export class ExpressApp {
                 errors: err.errors,
             });
         });
+        this._app.use(connectLivereload());
         // express options
         this._app.use(cors());
         this._app.options('*', cors(this.corsOptions));
-    }
-
-    private middlewares(middleWares: { forEach: (arg0: (middleWare: any) => void) => void }) {
-        middleWares.forEach((middleWare) => {
-            this._app.use(middleWare);
-        });
     }
 
     private routes(controllers: { forEach: (arg0: (controller: any) => void) => void }) {
@@ -51,11 +49,14 @@ export class ExpressApp {
         this._server.close();
     }
 
-    listen(port: number) {
-        this.port = port ?? 5000;
+    listen() {
         const that = this;
         this._server = this._app.listen(this.port, function () {
             console.log(logSymbols.info, `Starting app. Listening on port ${that.port}!`);
+            console.log(container.resolve(ConfigService).selectedCompileTarges);
+            container.resolve(ConfigService).selectedCompileTarges.forEach((url) => {
+                open(url);
+            });
         });
     }
 
