@@ -48,7 +48,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CompileController = void 0;
 require("reflect-metadata");
 var tsyringe_1 = require("tsyringe");
-var compiler_service_1 = require("../../services/compiler.service");
+var compile_service_1 = require("../../services/compile.service");
 var express = require('express');
 var CompileController = /** @class */ (function () {
     function CompileController(compileService) {
@@ -58,7 +58,18 @@ var CompileController = /** @class */ (function () {
         this.basePath = '';
         this.compileHTML = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                this.compileService.renderHtml().subscribe(function (data) {
+                this.compileService.compileHTML().subscribe(function (data) {
+                    res.set('Content-Type', 'text/html');
+                    res.status(200).send(data);
+                }, function (error) {
+                    res.status(500).send(error);
+                });
+                return [2 /*return*/];
+            });
+        }); };
+        this.compilePDF = function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.compileService.compilePDF().subscribe(function (data) {
                     res.set('Content-Type', 'text/html');
                     res.status(200).send(data);
                 }, function (error) {
@@ -71,10 +82,11 @@ var CompileController = /** @class */ (function () {
     }
     CompileController.prototype.initRoutes = function () {
         this.router.get(this.basePath + "/html", this.compileHTML);
+        this.router.get(this.basePath + "/pdf", this.compilePDF);
     };
     CompileController = __decorate([
         tsyringe_1.autoInjectable(),
-        __metadata("design:paramtypes", [compiler_service_1.CompilerService])
+        __metadata("design:paramtypes", [compile_service_1.CompileService])
     ], CompileController);
     return CompileController;
 }());

@@ -69,8 +69,16 @@ program
                 name: 'value',
                 message: 'Choose your compilation target',
                 choices: [
-                    { message: "http://localhost:" + port + "/HTML", name: "http://localhost:" + port + "/HTML", value: "http://localhost:" + port + "/HTML" },
-                    { message: "http://localhost:" + port + "/PDF", name: "http://localhost:" + port + "/PDF", value: "http://localhost:" + port + "/PDF" },
+                    {
+                        message: "http://localhost:" + port + "/html",
+                        name: "http://localhost:" + port + "/html",
+                        value: "http://localhost:" + port + "/html",
+                    },
+                    {
+                        message: "http://localhost:" + port + "/pdf",
+                        name: "http://localhost:" + port + "/pdf",
+                        value: "http://localhost:" + port + "/pdf",
+                    },
                 ],
             });
             prompt

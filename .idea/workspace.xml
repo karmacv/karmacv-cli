@@ -2,41 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699ff545-aa06-4e3e-8dc8-7e4c18b2bed8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/server/express.app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/server/express.app.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/server/middleware/ibase-controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/server/middleware/ibase-controller.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/services/compiler.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/services/compiler.service.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/services/utils.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/services/utils.service.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.setup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/theme-path.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/config.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/schema/index.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/schema/labels.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/server/compile.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/service/utils.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/karmacv-cli.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/karmacv-cli.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bitmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/compile.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsonresume.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/express.app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/express.app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/middleware/compile-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/compile-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middleware/ibase-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/ibase-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/compiler.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/compiler.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/utils.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/utils.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/labels.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/resume.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/compiler.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/google-java-format.xml" beforeDir="false" />
@@ -56,7 +34,6 @@
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/public/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/resume.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro/resume.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +70,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11.0.4" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/middleware" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/services" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -114,8 +91,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server/middleware" />
       <recent name="$PROJECT_DIR$/services" />
+      <recent name="$PROJECT_DIR$/server/middleware" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -126,14 +103,16 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Utils service spec">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.Rendered HTML document">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -204,9 +183,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Rendered HTML document" />
         <item itemvalue="Jest.Utils service spec" />
         <item itemvalue="Jest.Utils service spec.should start server" />
-        <item itemvalue="Jest.Rendered HTML document" />
         <item itemvalue="Jest.Rendered HTML document.should start server" />
         <item itemvalue="npm.start-dev" />
       </list>
@@ -239,6 +218,7 @@
       <workItem from="1611354568079" duration="2957000" />
       <workItem from="1611434476899" duration="11016000" />
       <workItem from="1611516776491" duration="10453000" />
+      <workItem from="1611610995515" duration="524000" />
     </task>
     <servers />
   </component>
@@ -266,7 +246,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/service/utils.service.spec.ts</url>
           <line>11</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

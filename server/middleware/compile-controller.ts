@@ -2,7 +2,7 @@ import 'reflect-metadata';
 
 import { autoInjectable } from 'tsyringe';
 
-import { CompilerService } from '../../services/compiler.service';
+import { CompileService } from '../../services/compile.service';
 import { IBaseController } from './ibase-controller';
 const express = require('express');
 
@@ -12,7 +12,7 @@ export class CompileController implements IBaseController {
 
     basePath = '';
 
-    constructor(private readonly compileService: CompilerService) {
+    constructor(private readonly compileService: CompileService) {
         this.initRoutes();
     }
 
@@ -22,7 +22,7 @@ export class CompileController implements IBaseController {
     }
 
     compileHTML = async (req, res) => {
-        this.compileService.renderHtml().subscribe(
+        this.compileService.compileHTML().subscribe(
             (data) => {
                 res.set('Content-Type', 'text/html');
                 res.status(200).send(data);
@@ -34,7 +34,7 @@ export class CompileController implements IBaseController {
     };
 
     compilePDF = async (req, res) => {
-        this.compileService.renderHtml().subscribe(
+        this.compileService.compilePDF().subscribe(
             (data) => {
                 res.set('Content-Type', 'text/html');
                 res.status(200).send(data);
