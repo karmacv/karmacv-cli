@@ -2,18 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699ff545-aa06-4e3e-8dc8-7e4c18b2bed8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.bitmap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/compile.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middleware/compile-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/compile-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/compiler.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/jest.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/jest.config.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/jest.setup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/jest.setup.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/models/theme-path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/models/theme-path.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/server/express.app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/server/express.app.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/server/middleware/ibase-controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/server/middleware/ibase-controller.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services/compile.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services/compile.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services/compiler.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services/compiler.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services/config.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services/config.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services/utils.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/services/utils.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/schema/index.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/schema/index.spec.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/schema/labels.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/schema/labels.spec.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/server/compile.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/server/compile.spec.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/service/utils.service.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/service/utils.service.spec.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/express.app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/express.app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/config.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/config.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/.gitignore" beforeDir="false" />
@@ -218,7 +240,7 @@
       <workItem from="1611354568079" duration="2957000" />
       <workItem from="1611434476899" duration="11016000" />
       <workItem from="1611516776491" duration="10453000" />
-      <workItem from="1611610995515" duration="524000" />
+      <workItem from="1611610995515" duration="1471000" />
     </task>
     <servers />
   </component>
