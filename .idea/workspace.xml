@@ -2,40 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699ff545-aa06-4e3e-8dc8-7e4c18b2bed8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/doc-type.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/prompt.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/theme/category-data.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/theme/category-label.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/jest.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/jest.config.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/jest.setup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/jest.setup.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/models/theme-path.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/models/theme-path.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/server/express.app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/server/express.app.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/server/middleware/compile-controller.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/server/middleware/ibase-controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/server/middleware/ibase-controller.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/compile.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/compile.service.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/compiler.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/compiler.service.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/config.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/config.service.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/utils.service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/services/utils.service.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/schema/index.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/schema/index.spec.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/schema/labels.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/schema/labels.spec.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/server/compile.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/server/compile.spec.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/service/utils.service.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/service/utils.service.spec.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/theme-path.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/theme-path.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/express.app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/express.app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/config.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/config.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/compile-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/compile-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/utils.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/utils.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/schema/index.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/schema/labels.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/server/compile.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/serve/compile.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/.gitignore" beforeDir="false" />
@@ -92,7 +71,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11.0.4" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/theme" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -113,6 +92,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/theme" />
       <recent name="$PROJECT_DIR$/services" />
       <recent name="$PROJECT_DIR$/server/middleware" />
       <recent name="$PROJECT_DIR$" />
@@ -125,7 +105,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Rendered HTML document">
+  <component name="RunManager" selected="Jest.Rendered HTML document (2)">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -139,6 +119,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Rendered HTML document (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/test/theme/index.spec.ts" />
+      <test-names>
+        <test-name value="Rendered HTML document" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Rendered HTML document (2)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/test/theme/category-data.spec.ts" />
+      <test-names>
+        <test-name value="Rendered HTML document" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Rendered HTML document" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -149,20 +155,6 @@
       <test-file value="$PROJECT_DIR$/test/server/compile.spec.ts" />
       <test-names>
         <test-name value="Rendered HTML document" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Rendered HTML document.should start server" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/server/compile.spec.ts" />
-      <test-names>
-        <test-name value="Rendered HTML document" />
-        <test-name value="should start server" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -193,23 +185,13 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="start-dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start-dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Rendered HTML document (2)" />
+        <item itemvalue="Jest.Rendered HTML document (1)" />
         <item itemvalue="Jest.Rendered HTML document" />
         <item itemvalue="Jest.Utils service spec" />
         <item itemvalue="Jest.Utils service spec.should start server" />
-        <item itemvalue="Jest.Rendered HTML document.should start server" />
-        <item itemvalue="npm.start-dev" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +222,7 @@
       <workItem from="1611354568079" duration="2957000" />
       <workItem from="1611434476899" duration="11016000" />
       <workItem from="1611516776491" duration="10453000" />
-      <workItem from="1611610995515" duration="1471000" />
+      <workItem from="1611610995515" duration="7786000" />
     </task>
     <servers />
   </component>

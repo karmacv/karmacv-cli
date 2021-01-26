@@ -12,6 +12,7 @@ describe('Rendered HTML document', () => {
     let expressApp: ExpressApp;
 
     beforeAll(async (done) => {
+        container.register('selectedCompileTarges', { useValue: '' });
         container.register('themePath', { useValue: `${appRoot}/test/themes/kcv-theme-retro` });
         const utilsService = container.resolve(UtilsService);
         expressApp = new ExpressApp(5000, [container.resolve(CompileController)]);

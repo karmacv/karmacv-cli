@@ -4,7 +4,7 @@ import 'reflect-metadata';
 
 import { autoInjectable, container } from 'tsyringe';
 const fs = require('fs');
-import { ThemePath } from '../models/theme-path';
+import { ThemePathModel } from '../models/theme-path.model';
 import { ExpressApp } from '../server/express.app';
 import { CompileController } from '../server/middleware/compile-controller';
 
@@ -52,7 +52,7 @@ export class UtilsService {
         process.exit();
     }
 
-    findThemes(additionalPaths?: Array<string>): ThemePath[] {
+    findThemes(additionalPaths?: Array<string>): ThemePathModel[] {
         let paths = [appRoot.path];
         if (additionalPaths) {
             paths = paths.concat(additionalPaths);
@@ -64,7 +64,11 @@ export class UtilsService {
                 return {
                     name: require(path).name,
                     path: path,
-                } as ThemePath;
+                } as ThemePathModel;
             });
+    }
+
+    static getServeUrl(port: number, path: string) {
+        return `http://localhost:${port}/${path}`;
     }
 }

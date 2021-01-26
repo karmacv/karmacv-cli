@@ -36,7 +36,7 @@ export class CompileController implements IBaseController {
     compilePDF = async (req, res) => {
         this.compileService.compilePDF().subscribe(
             (data) => {
-                res.set('Content-Type', 'text/html');
+                res.set('Content-Type', 'application/pdf');
                 res.status(200).send(data);
             },
             (error) => {

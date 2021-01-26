@@ -53,9 +53,11 @@ export class ExpressApp {
         const that = this;
         this._server = this._app.listen(this.port, function () {
             console.log(logSymbols.info, `Starting app. Listening on port ${that.port}!`);
-            container.resolve(ConfigService).selectedCompileTarges.forEach((url) => {
-                open(url);
-            });
+            if (container.resolve(ConfigService).selectedCompileTarges) {
+                container.resolve(ConfigService).selectedCompileTarges.forEach((url) => {
+                    open(url);
+                });
+            }
         });
     }
 
