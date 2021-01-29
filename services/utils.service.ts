@@ -40,16 +40,6 @@ export class UtilsService {
 
     initResume() {
         fs.writeFileSync(`${appRoot}/resume.json`, require(`${appRoot}/jsonresume.json`));
-        console.log('Your resume.json has been created!');
-        console.log('');
-        console.log('To generate a formatted .html .md .txt or .pdf resume from your resume.json');
-        console.log('type: `resume export [someFileName]` including file extension eg: `resume export myresume.html`');
-        console.log('You can optionally specify an available theme for html and pdf resumes using the --theme flag.');
-        console.log('Example: `resume export myresume.pdf --theme flat`');
-        console.log('Or simply type: `resume export` and follow the prompts.');
-        console.log('');
-
-        process.exit();
     }
 
     findThemes(additionalPaths?: Array<string>): ThemePathModel[] {

@@ -10,6 +10,9 @@ import { fromPromise } from 'rxjs/internal-compatibility';
 
 import { ConfigService } from './config.service';
 const convertHTMLToPDF = require('pdf-puppeteer');
+const { JSDOM } = require('jsdom');
+const { window } = new JSDOM('');
+const $ = require('jquery')(window);
 
 @injectable()
 export class CompileService {
@@ -18,6 +21,7 @@ export class CompileService {
             try {
                 const themeModule = this.themePkg;
                 const jsonData = this.jsonResume;
+                const socketScript = fs.readFileSync(`${appRoot}/server/middleware/client-side.html`).toString();
                 const render = themeModule.render;
                 let renderedHTML = render(jsonData);
                 renderedHTML = renderedHTML.replace('href="//', 'href="http://');

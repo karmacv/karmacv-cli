@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699ff545-aa06-4e3e-8dc8-7e4c18b2bed8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/doc-type.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/prompt.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/theme/category-data.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/theme/category-label.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/theme-path.ts" beforeDir="false" afterPath="$PROJECT_DIR$/models/theme-path.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/express.app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/express.app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middleware/compile-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/compile-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/compile.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/compile.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/prompt.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/prompt.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/utils.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/utils.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/schema/index.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/schema/labels.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/server/compile.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/serve/compile.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/.gitignore" beforeDir="false" />
@@ -42,7 +36,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/test/themes/kcv-theme-retro" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -105,16 +99,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Rendered HTML document (2)">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.Rendered HTML document.should start server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,6 +150,20 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Rendered HTML document.should start server" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/serve/compile.spec.ts" />
+      <test-names>
+        <test-name value="Rendered HTML document" />
+        <test-name value="should start server" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Utils service spec" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -171,27 +177,13 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Utils service spec.should start server" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/service/utils.service.spec.ts" />
-      <test-names>
-        <test-name value="Utils service spec" />
-        <test-name value="should start server" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Rendered HTML document.should start server" />
         <item itemvalue="Jest.Rendered HTML document (2)" />
         <item itemvalue="Jest.Rendered HTML document (1)" />
         <item itemvalue="Jest.Rendered HTML document" />
         <item itemvalue="Jest.Utils service spec" />
-        <item itemvalue="Jest.Utils service spec.should start server" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +214,8 @@
       <workItem from="1611354568079" duration="2957000" />
       <workItem from="1611434476899" duration="11016000" />
       <workItem from="1611516776491" duration="10453000" />
-      <workItem from="1611610995515" duration="7786000" />
+      <workItem from="1611610995515" duration="17456000" />
+      <workItem from="1611849301184" duration="5577000" />
     </task>
     <servers />
   </component>

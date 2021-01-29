@@ -60,7 +60,6 @@ export class PromptService {
                             const urls = data.map((item) => {
                                 return UtilsService.getServeUrl(port, DocType[item].toString());
                             });
-                            console.log(urls);
                             container.register('selectedCompileTarges', { useValue: urls });
                             container.resolve(UtilsService).startApp(port).listen();
                         })

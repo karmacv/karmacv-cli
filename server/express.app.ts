@@ -1,18 +1,21 @@
 import { Application } from 'express';
-import * as http from 'http';
 const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
 import logSymbols from 'log-symbols';
 import { container } from 'tsyringe';
+const reload = require('reload');
+import * as appRoot from 'app-root-path';
+import * as http from 'http';
+import * as watch from 'watch';
 
 import { ConfigService } from '../services/config.service';
-const connectLivereload = require('connect-livereload');
 const open = require('open');
 
 export class ExpressApp {
     private _app: Application;
     private _server: http.Server;
+    private _io;
     public port: number;
 
     corsOptions = {
@@ -33,7 +36,6 @@ export class ExpressApp {
                 errors: err.errors,
             });
         });
-        this._app.use(connectLivereload());
         // express options
         this._app.use(cors());
         this._app.options('*', cors(this.corsOptions));
@@ -51,13 +53,20 @@ export class ExpressApp {
 
     listen() {
         const that = this;
-        this._server = this._app.listen(this.port, function () {
+        this._server = http.createServer(this._app);
+        this._io = require('socket.io')(this._server);
+        that._server.listen(that.port, function () {
             console.log(logSymbols.info, `Starting app. Listening on port ${that.port}!`);
             if (container.resolve(ConfigService).selectedCompileTarges) {
                 container.resolve(ConfigService).selectedCompileTarges.forEach((url) => {
                     open(url);
                 });
             }
+        });
+        that._io.on('connection', (socket) => {
+            watch.watchTree(`${appRoot}/test/themes/kcv-theme-retro`, function (f, curr, prev) {
+                socket.broadcast.emit('refreshPage');
+            });
         });
     }
 
