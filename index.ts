@@ -1,11 +1,12 @@
 import 'reflect-metadata';
 
 import * as appRoot from 'app-root-path';
-const reload = require('reload');
 import { container } from 'tsyringe';
 
 import { PromptService } from './services/prompt.service';
 import { UtilsService } from './services/utils.service';
+const reload = require('reload');
+
 require('dotenv').load({ silent: true });
 const pkg = require(appRoot + '/package.json');
 const program = require('commander');
@@ -18,10 +19,17 @@ const liveReloadServer = livereload.createServer();
 program.usage('[command] [options]').version(pkg.version).option('-p, --port <port>', 'Used by `serve`', 5000);
 
 program
-    .command('init')
+    .command('init-schema')
     .description('Initialize a resume.json file')
     .action(function () {
         container.resolve(UtilsService).initResume();
+    });
+
+program
+    .command('init-theme')
+    .description('Initialize a new template')
+    .action(function () {
+        container.resolve(UtilsService).createTheme();
     });
 
 program

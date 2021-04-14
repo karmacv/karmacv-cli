@@ -2,41 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699ff545-aa06-4e3e-8dc8-7e4c18b2bed8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/express.app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/express.app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/compile.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/compile.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/prompt.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/prompt.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/utils.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/utils.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/google-java-format.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/karmacv-theme-retro.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/kcv-theme-retro.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/sonarIssues.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/sonarlint/issuestore/2/1/21d424c433d62a12cea9550ce3f381ee46bb7abe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/sonarlint/issuestore/a/7/a77b15c0d64cf6111e025645e562faf8ccabb9d7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro/resume.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/test/themes/kcv-theme-retro/resume.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/awards.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/awards.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/basics.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/basics.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/education.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/education.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/interests.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/interests.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/languages.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/languages.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/publications.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/publications.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/references.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/references.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/skills.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/skills.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/volunteer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/volunteer.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/partials/work.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/partials/work.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/resume.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/resume.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/test/themes/kcv-theme-retro" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -82,7 +82,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -92,25 +92,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/test/themes" />
       <recent name="$PROJECT_DIR$/test/server" />
       <recent name="$PROJECT_DIR$/test/schema" />
       <recent name="$PROJECT_DIR$/server" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.Rendered HTML document.should start server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Rendered HTML document (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -215,7 +204,10 @@
       <workItem from="1611434476899" duration="11016000" />
       <workItem from="1611516776491" duration="10453000" />
       <workItem from="1611610995515" duration="17456000" />
-      <workItem from="1611849301184" duration="5577000" />
+      <workItem from="1611849301184" duration="5828000" />
+      <workItem from="1617480173918" duration="1412000" />
+      <workItem from="1617481603348" duration="117000" />
+      <workItem from="1617481731790" duration="20223000" />
     </task>
     <servers />
   </component>

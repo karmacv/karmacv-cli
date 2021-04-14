@@ -7,6 +7,9 @@ import { ThemePathModel } from '../models/theme-path.model';
 import { UtilsService } from './utils.service';
 const { Select } = require('enquirer');
 const { MultiSelect } = require('enquirer');
+const { Snippet } = require('enquirer');
+const semver = require('semver');
+const slugify = require('@matters/slugify');
 
 @injectable()
 export class PromptService {
@@ -23,6 +26,49 @@ export class PromptService {
                 };
             }),
         });
+    }
+
+    createTemplate() {
+        const prompt = new Snippet({
+            name: 'username',
+            message: 'Fill out the fields in package.json',
+            required: true,
+            fields: [
+                {
+                    name: 'author_name',
+                    message: 'Author Name',
+                },
+                {
+                    name: 'version',
+                    validate(value, state, item, index) {
+                        if (item && item.name === 'version' && !semver.valid(value)) {
+                            return prompt.styles.danger('version should be a valid semver value');
+                        }
+                        return true;
+                    },
+                },
+                {
+                    name: 'name',
+                    validate(value, state, item, index): any | boolean {
+                        if (slugify(value) != value) {
+                            return prompt.styles.danger(`please check the package name, this should be correctly formatted: "kcv-${slugify(value)}"`);
+                        }
+                        return true;
+                    },
+                },
+            ],
+            template: `{
+              "name": "kcv-\${name}",
+              "description": "\${description}",
+              "version": "\${version}",
+              "homepage": "https://github.com/\${username}/\${name}",
+              "author": "\${author_name} (https://github.com/\${username})",
+              "repository": "\${username}/\${name}",
+              "license": "\${license:ISC}"
+            }
+            `,
+        });
+        return prompt;
     }
 
     promptOpenWebPage(port: number) {

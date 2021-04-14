@@ -1,12 +1,15 @@
 import * as appRoot from 'app-root-path';
 const FileHound = require('filehound');
 import 'reflect-metadata';
+const fse = require('fs-extra');
+const editJsonFile = require('edit-json-file');
 
 import { autoInjectable, container } from 'tsyringe';
 const fs = require('fs');
 import { ThemePathModel } from '../models/theme-path.model';
 import { ExpressApp } from '../server/express.app';
 import { CompileController } from '../server/middleware/compile-controller';
+import { PromptService } from './prompt.service';
 
 @autoInjectable()
 export class UtilsService {
@@ -28,6 +31,36 @@ export class UtilsService {
             fileName: fileName,
             fileFormatToUse: fileFormatToUse,
         };
+    }
+
+    createTheme() {
+        container
+            .resolve(PromptService)
+            .createTemplate()
+            .run()
+            .then((answer) => {
+                this.initMainTemplate(JSON.parse(answer.result));
+            })
+            .catch(console.error);
+    }
+
+    initMainTemplate(packageConfig: any) {
+        const targetPath = `${process.cwd()}/${packageConfig.name}`;
+        const sourceTheme = `${appRoot}/themes/kcv-theme-main`;
+        fse.copySync(sourceTheme, `${targetPath}`, { overwrite: true });
+
+        const targetPackagePath = `${targetPath}/package.json`;
+        const editPackage = editJsonFile(targetPackagePath);
+        editPackage.set('name', packageConfig.name);
+        editPackage.set('description', packageConfig.description);
+        editPackage.set('version', packageConfig.version);
+        editPackage.set('homepage', packageConfig.homepage);
+        editPackage.set('author', packageConfig.author);
+        editPackage.set('repository', packageConfig.repository);
+        editPackage.set('license', packageConfig.license);
+        editPackage.save();
+
+        process.exit();
     }
 
     extractFileFormat(fileName: string) {
