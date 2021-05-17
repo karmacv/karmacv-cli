@@ -5,16 +5,11 @@ import { container } from 'tsyringe';
 
 import { PromptService } from './services/prompt.service';
 import { UtilsService } from './services/utils.service';
-const reload = require('reload');
 
 require('dotenv').load({ silent: true });
 const pkg = require(appRoot + '/package.json');
 const program = require('commander');
 const port = 5000;
-
-const livereload = require('livereload');
-
-const liveReloadServer = livereload.createServer();
 
 program.usage('[command] [options]').version(pkg.version).option('-p, --port <port>', 'Used by `serve`', 5000);
 

@@ -2,11 +2,10 @@ import { Application } from 'express';
 const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
-import logSymbols from 'log-symbols';
-import { container } from 'tsyringe';
-const reload = require('reload');
 import * as appRoot from 'app-root-path';
 import * as http from 'http';
+import logSymbols from 'log-symbols';
+import { container } from 'tsyringe';
 import * as watch from 'watch';
 
 import { ConfigService } from '../services/config.service';

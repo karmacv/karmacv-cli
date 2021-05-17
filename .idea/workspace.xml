@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699ff545-aa06-4e3e-8dc8-7e4c18b2bed8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/express.app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/express.app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/compile.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/compile.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" afterDir="false" />
@@ -78,7 +81,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -96,6 +99,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.Rendered HTML document.should start server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Rendered HTML document (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -207,6 +221,7 @@
       <workItem from="1618860296931" duration="20000" />
       <workItem from="1620326896898" duration="502000" />
       <workItem from="1621256859656" duration="259000" />
+      <workItem from="1621257720791" duration="4278000" />
     </task>
     <servers />
   </component>

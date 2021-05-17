@@ -12,7 +12,6 @@ import { ConfigService } from './config.service';
 const convertHTMLToPDF = require('pdf-puppeteer');
 const { JSDOM } = require('jsdom');
 const { window } = new JSDOM('');
-const $ = require('jquery')(window);
 
 @injectable()
 export class CompileService {
