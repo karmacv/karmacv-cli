@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699ff545-aa06-4e3e-8dc8-7e4c18b2bed8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/prompt.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/prompt.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/utils.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/utils.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/themes/kcv-theme-retro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/package.json" afterDir="false" />
@@ -69,7 +65,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.eslint" value="$USER_HOME$/.nvm/versions/node/v16.1.0/bin/node" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -82,7 +78,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -207,7 +203,10 @@
       <workItem from="1611849301184" duration="5828000" />
       <workItem from="1617480173918" duration="1412000" />
       <workItem from="1617481603348" duration="117000" />
-      <workItem from="1617481731790" duration="20223000" />
+      <workItem from="1617481731790" duration="20944000" />
+      <workItem from="1618860296931" duration="20000" />
+      <workItem from="1620326896898" duration="502000" />
+      <workItem from="1621256859656" duration="259000" />
     </task>
     <servers />
   </component>
