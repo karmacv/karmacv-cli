@@ -8,7 +8,7 @@ import { UtilsService } from '../../services/utils.service';
 describe('Utils service spec', () => {
     it('should start server', (done) => {
         const utilsService = container.resolve(UtilsService);
-        const themes = utilsService.findThemes([`${appRoot}/test/themes`]);
+        const themes = utilsService.findThemes([`${appRoot.path}/themes`]);
         expect(themes.length).toBe(1);
         done();
     });

@@ -2,7 +2,6 @@ import { Application } from 'express';
 const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
-import * as appRoot from 'app-root-path';
 import * as http from 'http';
 import logSymbols from 'log-symbols';
 import { container } from 'tsyringe';
@@ -63,7 +62,9 @@ export class ExpressApp {
             }
         });
         that._io.on('connection', (socket) => {
-            watch.watchTree(`${appRoot}/test/themes/kcv-theme-retro`, function (f, curr, prev) {
+            console.log('Socket connected');
+            watch.watchTree(container.resolve(ConfigService).themePath, function (f, curr, prev) {
+                console.log('Files changed. Refresh Preview.');
                 socket.broadcast.emit('refreshPage');
             });
         });

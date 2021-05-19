@@ -1,4 +1,3 @@
-import * as appRoot from 'app-root-path';
 import logSymbols from 'log-symbols';
 import { container, injectable } from 'tsyringe';
 
@@ -10,19 +9,21 @@ const { MultiSelect } = require('enquirer');
 const { Snippet } = require('enquirer');
 const semver = require('semver');
 const slugify = require('@matters/slugify');
+const { resolve } = require('path');
 
 @injectable()
 export class PromptService {
+    constructor(private utilsService: UtilsService) {}
+
     promptSelectTheme(themes: ThemePathModel[]): any {
         return new Select({
             name: 'path',
             message: 'Choose a theme',
             choices: themes.map((item) => {
-                const path = item.path.replace('/package.json', '');
                 return {
-                    name: path,
+                    name: item.path,
                     message: item.name,
-                    value: path,
+                    value: item.path,
                 };
             }),
         });
@@ -78,22 +79,22 @@ export class PromptService {
             initial: [DocType.HTML.toString(), DocType.PDF.toString()],
             choices: [
                 {
-                    message: UtilsService.getServeUrl(port, DocType.HTML.toString()),
+                    message: this.utilsService.getServeUrl(port, DocType.HTML.toString()),
                     name: DocType.HTML.toString(),
-                    value: UtilsService.getServeUrl(port, DocType.HTML.toString()),
+                    value: this.utilsService.getServeUrl(port, DocType.HTML.toString()),
                 },
                 {
-                    message: UtilsService.getServeUrl(port, DocType.PDF.toString()),
+                    message: this.utilsService.getServeUrl(port, DocType.PDF.toString()),
                     name: DocType.PDF.toString(),
-                    value: UtilsService.getServeUrl(port, DocType.PDF.toString()),
+                    value: this.utilsService.getServeUrl(port, DocType.PDF.toString()),
                 },
             ],
         });
     }
 
-    init(port: number) {
-        const themes = this.localThemes;
-        if (themes.length) {
+    init(port: number, path: string) {
+        const themes = this.utilsService.findThemes(resolve(path));
+        if (themes?.length) {
             const selectThemePrompt = this.promptSelectTheme(themes);
             selectThemePrompt
                 .run()
@@ -104,10 +105,10 @@ export class PromptService {
                         .run()
                         .then((data) => {
                             const urls = data.map((item) => {
-                                return UtilsService.getServeUrl(port, DocType[item].toString());
+                                return this.utilsService.getServeUrl(port, DocType[item].toString());
                             });
                             container.register('selectedCompileTarges', { useValue: urls });
-                            container.resolve(UtilsService).startApp(port).listen();
+                            this.utilsService.startApp(port).listen();
                         })
                         .catch(console.error);
                 })
@@ -118,6 +119,6 @@ export class PromptService {
     }
 
     get localThemes(): ThemePathModel[] {
-        return container.resolve(UtilsService).findThemes([`${appRoot}/test/themes/kcv-theme-retro`]);
+        return this.utilsService.findThemes();
     }
 }

@@ -4,10 +4,13 @@
     <list default="true" id="699ff545-aa06-4e3e-8dc8-7e4c18b2bed8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/express.app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/express.app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/compile.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/compile.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/prompt.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/prompt.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/utils.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/utils.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/service/utils.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/service/utils.service.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" afterDir="false" />
@@ -35,7 +38,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/kcv-theme-main" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -61,6 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/server/middleware/client-side.html" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11.0.4" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
@@ -98,7 +102,7 @@
       <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Rendered HTML document.should start server">
+  <component name="RunManager" selected="Attach to Node.js/Chrome.CLI-Debug">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -110,57 +114,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Rendered HTML document (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/test/theme/index.spec.ts" />
-      <test-names>
-        <test-name value="Rendered HTML document" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Rendered HTML document (2)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/test/theme/category-data.spec.ts" />
-      <test-names>
-        <test-name value="Rendered HTML document" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Rendered HTML document" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/test/server/compile.spec.ts" />
-      <test-names>
-        <test-name value="Rendered HTML document" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Rendered HTML document.should start server" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/serve/compile.spec.ts" />
-      <test-names>
-        <test-name value="Rendered HTML document" />
-        <test-name value="should start server" />
-      </test-names>
+    <configuration name="CLI-Debug" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
     <configuration name="Utils service spec" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
@@ -176,12 +130,12 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.CLI-Debug" />
+      <item itemvalue="Jest.Utils service spec" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Rendered HTML document.should start server" />
-        <item itemvalue="Jest.Rendered HTML document (2)" />
-        <item itemvalue="Jest.Rendered HTML document (1)" />
-        <item itemvalue="Jest.Rendered HTML document" />
         <item itemvalue="Jest.Utils service spec" />
       </list>
     </recent_temporary>
@@ -221,7 +175,7 @@
       <workItem from="1618860296931" duration="20000" />
       <workItem from="1620326896898" duration="502000" />
       <workItem from="1621256859656" duration="259000" />
-      <workItem from="1621257720791" duration="4278000" />
+      <workItem from="1621257720791" duration="21620000" />
     </task>
     <servers />
   </component>
@@ -242,17 +196,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/service/utils.service.spec.ts</url>
-          <line>11</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

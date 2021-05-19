@@ -75,23 +75,30 @@ export class UtilsService {
         fs.writeFileSync(`${appRoot}/resume.json`, require(`${appRoot}/jsonresume.json`));
     }
 
-    findThemes(additionalPaths?: Array<string>): ThemePathModel[] {
-        let paths = [appRoot.path];
-        if (additionalPaths) {
-            paths = paths.concat(additionalPaths);
+    findThemes(searchPath: string = './'): ThemePathModel[] {
+        try {
+            const files = FileHound.create().depth(2).path(searchPath).match('package.json').findSync();
+            return files
+                .filter((path) => {
+                    try {
+                        return JSON.parse(fs.readFileSync(path)).name?.includes('kcv-theme');
+                    } catch (e) {
+                        return false;
+                    }
+                })
+                .map((path) => {
+                    const absolutePath = path.replace('/package.json', '');
+                    return {
+                        name: JSON.parse(fs.readFileSync(path)).name,
+                        path: absolutePath,
+                    } as ThemePathModel;
+                });
+        } catch (e) {
+            console.log(`Invalid path: ${e.message}`);
         }
-        const files = FileHound.create().depth(2).paths(paths).match('package.json').findSync();
-        return files
-            .filter((path) => require(path).name.includes('kcv-theme'))
-            .map((path) => {
-                return {
-                    name: require(path).name,
-                    path: path,
-                } as ThemePathModel;
-            });
     }
 
-    static getServeUrl(port: number, path: string) {
+    getServeUrl(port: number, path: string) {
         return `http://localhost:${port}/${path}`;
     }
 }

@@ -11,7 +11,7 @@ const pkg = require(appRoot + '/package.json');
 const program = require('commander');
 const port = 5000;
 
-program.usage('[command] [options]').version(pkg.version).option('-p, --port <port>', 'Used by `serve`', 5000);
+program.usage('[command] [options]').version(pkg.version);
 
 program
     .command('init-schema')
@@ -29,9 +29,13 @@ program
 
 program
     .command('serve')
+    .option('--port <port>', 'Port of the server', 5000)
+    .option('--path <path>', 'Path to the theme', './')
     .description(`Serve resume at http://localhost:${port}`)
-    .action(function () {
-        container.resolve(PromptService).init(port);
+    .action((port, path) => {
+        port = port && port instanceof Number ? port : 5000;
+        path = path && path instanceof String ? path : './';
+        container.resolve(PromptService).init(port, path);
     });
 
 program.parse(process.argv);
