@@ -1,6 +1,6 @@
 {
   "name": "kcv-cli",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "The karmacv JSON Resume command line interface",
   "main": "dist/index.js",
   "bin": "dist/index.js",
