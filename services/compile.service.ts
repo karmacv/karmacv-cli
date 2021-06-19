@@ -1,23 +1,13 @@
-import * as appRoot from 'app-root-path';
-import * as fs from 'fs';
-import logSymbols from 'log-symbols';
-import { catchError, concatMap, map } from 'rxjs/operators';
-import { autoInjectable } from 'tsyringe';
-const inlineCss = require('inline-css');
-const HTMLtoDOCX = require('html-to-docx');
-import { Observable, throwError } from 'rxjs';
-import { fromPromise } from 'rxjs/internal-compatibility';
+import { Service, Inject } from 'https://deno.land/x/mandarinets@v2.3.2/mod.ts';
+import { Observable } from 'https://cdn.skypack.dev/rxjs';
+import { map }from 'https://cdn.skypack.dev/rxjs/operators';
+import { cheerio } from "https://deno.land/x/cheerio@1.0.4/mod.ts";
 
-import { ConfigService } from './config.service';
-const convertHTMLToPDF = require('pdf-puppeteer');
-const cheerio = require('cheerio');
-
-@autoInjectable()
+@Service()
 export class CompileService {
-    constructor(private readonly configService: ConfigService) {}
 
-    compileHTML(): Observable<any> {
-        return new Observable((subject) => {
+    compileHTML(): Promise<any> {
+        return new Promise(function(resolve, reject) {
             try {
                 const themeModule = this.themePkg;
                 const jsonData = this.jsonResume;
@@ -27,15 +17,14 @@ export class CompileService {
                 renderedHTML = renderedHTML.replace('src="//', 'src="http://');
                 const $renderedDOM = cheerio.load(renderedHTML);
                 const $head = $renderedDOM('head');
-                const injectableJS = fs.readFileSync(`${appRoot}/server/middleware/client-side.html`).toString();
+                const injectableJS = Deno.readFileSync(`${appRoot}/server/middleware/client-side.html`).toString();
                 $head.append(injectableJS);
-                return subject.next($renderedDOM.html());
+                resolve($renderedDOM.html());
             } catch (e) {
                 const errorMsg = `couldn't render package ${this.themePkg}`;
                 console.log(logSymbols.error, errorMsg);
-                subject.error(errorMsg);
+                reject(errorMsg);
             }
-        }).pipe(
             concatMap((renderedHTML) => {
                 return fromPromise(
                     inlineCss(renderedHTML, {
@@ -55,7 +44,7 @@ export class CompileService {
             })
         );
     }
-
+    
     compileDocx() {
         return new Observable((subject) => {
             try {
@@ -71,7 +60,7 @@ export class CompileService {
             }
         });
     }
-
+    
     compilePDF() {
         return new Observable((subject) => {
             try {
@@ -95,7 +84,7 @@ export class CompileService {
             }
         });
     }
-
+    
     get themePkg(): any {
         try {
             const themePath = this.configService.themePath;
@@ -105,8 +94,8 @@ export class CompileService {
             process.exit();
         }
     }
-
+    
     get jsonResume(): string {
-        return JSON.parse(fs.readFileSync(`${appRoot}/resume.json`).toString());
+        return JSON.parse(Deno.readFileSync(`${appRoot}/resume.json`).toString());
     }
 }

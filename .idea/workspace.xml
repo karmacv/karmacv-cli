@@ -2,8 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="699ff545-aa06-4e3e-8dc8-7e4c18b2bed8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/c/1cd92a0308eed3ae10f12a57fbc89e64f4f55e18" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23013a12ced18e97feb9516b335ddf45543df9d1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/238babefcafff69c523f9e3d2d9e57f63122f8bd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/266844263252659109dbaf0084a9edff299324c0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3b518894122e0330de0eca9e5892ae86d741b446" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c7a58d3269ae7ac90cb5a6ad2539259f1e21cad" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/481059ac665da035238d7c06aa745272a5e375b9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4af4859e8ef01794c43e27e4c48a5b6d399a396d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/65d88baa5c8f5ddc2fba84ea6b4f74ef58e15d87" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f3e9935ddd4f89ecb1957dfabf848633323c851" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/702f6e28ae24d1d770c2cf97a4aafadd935af16d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/72b3bd8693229e03dadbf2b8271aa3f3ee6a5ec8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84fd797a8440f0010fe35b3431985e368fb53ef8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/86e93551348d108501f144213da77efaa59fc195" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c7ee29269e93fe0dfd18c15911dd548b7dd37c2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c84ddd51b923b9e827c75b6d8ed31e3403b7dca" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ace4c28caa28ac863b874fe8b0edaa18d21e7753" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/af95e1635b2f2489ca89ad21ca41c2c081b1d253" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c0f835f045b0276baa0948d3c7c53d04242ee0f5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca0f756576612752582b6a28be4cf056519f0bae" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d851a598da6c48da0f0652b9762b5d5f15eb5e65" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fc41e5abd54c391df9e8a436c09df5c3068a04f3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/express.app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/express.app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/compile-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/compile-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/ibase-controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/compile.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/compile.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/config.service.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kcv-theme-main/package-lock.json" afterDir="false" />
@@ -30,6 +60,9 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="DockDockBuild.Settings">
+    <option name="codePath" value="$PROJECT_DIR$" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -53,6 +86,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -60,16 +94,18 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/server/middleware/client-side.html&#10;/Users/eltonmarku/karmacv/karmacv-cli/resume.json" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11.0.4" />
-    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/test/theme" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="$USER_HOME$/.nvm/versions/node/v16.1.0/bin/node" />
     <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -77,7 +113,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -96,17 +132,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Attach to Node.js/Chrome.CLI-Debug">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CLI-Debug" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
@@ -168,7 +193,17 @@
       <workItem from="1618860296931" duration="20000" />
       <workItem from="1620326896898" duration="502000" />
       <workItem from="1621256859656" duration="259000" />
-      <workItem from="1621257720791" duration="21927000" />
+      <workItem from="1621257720791" duration="23731000" />
+      <workItem from="1621751136139" duration="606000" />
+      <workItem from="1622977728710" duration="737000" />
+      <workItem from="1623417207710" duration="3136000" />
+      <workItem from="1623611363922" duration="304000" />
+      <workItem from="1623611799236" duration="150000" />
+      <workItem from="1623611951775" duration="10000" />
+      <workItem from="1623612060831" duration="608000" />
+      <workItem from="1623785241075" duration="852000" />
+      <workItem from="1623786106719" duration="3200000" />
+      <workItem from="1624046160957" duration="1174000" />
     </task>
     <servers />
   </component>
