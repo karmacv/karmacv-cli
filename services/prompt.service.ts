@@ -1,19 +1,18 @@
-import logSymbols from 'log-symbols';
-import { container, injectable } from 'tsyringe';
-
-import { DocType } from '../models/doc-type.model';
-import { ThemePathModel } from '../models/theme-path.model';
+import logSymbols from 'https://cdn.skypack.dev/log-symbols';
+import { DocType } from '../models/doc-type.model.ts';
+import { ThemePathModel } from '../models/theme-path.model.ts';
 import { UtilsService } from './utils.service';
-const { Select } = require('enquirer');
-const { MultiSelect } = require('enquirer');
-const { Snippet } = require('enquirer');
+import Select from 'https://cdn.skypack.dev/enquirer';
+import MultiSelect from 'https://cdn.skypack.dev/enquirer';
+import Snippet from 'https://cdn.skypack.dev/enquirer';
 const semver = require('semver');
 const slugify = require('@matters/slugify');
 const { resolve } = require('path');
 
 @injectable()
 export class PromptService {
-    constructor(private utilsService: UtilsService) {}
+    constructor(private utilsService: UtilsService) {
+    }
 
     promptSelectTheme(themes: ThemePathModel[]): any {
         return new Select({

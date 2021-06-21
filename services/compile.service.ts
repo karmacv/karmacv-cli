@@ -4,9 +4,12 @@ import logSymbols from 'https://cdn.skypack.dev/log-symbols';
 import inlineCss from 'https://cdn.skypack.dev/inline-css';
 import htmlToDocxBuffer from 'https://cdn.skypack.dev/html-to-docx-buffer';
 import convertHTMLToPDF from 'https://cdn.skypack.dev/pdf-puppeteer';
+import { ConfigService } from "./config.service.ts";
 
 @Service()
 export class CompileService {
+
+    constructor(private readonly configService: ConfigService) {}
 
     compileHTML(): Promise<string> {
         const that = this;
@@ -77,15 +80,13 @@ export class CompileService {
     
     get themePkg(): any {
         try {
-            const themePath = this.configService.themePath;
-            return require(`${themePath}/index.js`);
+            return import(this.configService.denoModuleUrl);
         } catch (err) {
             console.log(`No theme found in the current folder. Cause: ${err}`);
-            process.exit();
         }
     }
     
     get jsonResume(): string {
-        return JSON.parse(Deno.readFileSync(`${appRoot}/resume.json`).toString());
+        return JSON.parse(Deno.readFileSync(`./resume.json`).toString());
     }
 }
