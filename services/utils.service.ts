@@ -1,20 +1,22 @@
-import * as appRoot from 'app-root-path';
-const FileHound = require('filehound');
-import 'reflect-metadata';
-const fse = require('fs-extra');
-const editJsonFile = require('edit-json-file');
-
-import { autoInjectable, container } from 'tsyringe';
-const fs = require('fs');
+import { appRoot } from 'https://cdn.skypack.dev/app-root-path';
+import { FileHound } from 'https://cdn.skypack.dev/filehound';
+import { fse } from 'https://cdn.skypack.dev/fs-extra'
+import { editJsonFile } from "https://cdn.skypack.dev/edit-json-file";
+import { Service, Inject } from 'https://deno.land/x/mandarinets@v2.3.2/mod.ts';
 import { ThemePathModel } from '../models/theme-path.model';
 import { ExpressApp } from '../server/express.app';
 import { CompileController } from '../server/middleware/compile-controller';
 import { PromptService } from './prompt.service';
 
-@autoInjectable()
+@Service()
 export class UtilsService {
+
+    constructor(private readonly compileController: CompileController,
+                private readonly promptService: PromptService) {
+    }
+
     startApp(port: number) {
-        return new ExpressApp(port, [container.resolve(CompileController)]);
+        return new ExpressApp(port, [this.compileController]);
     }
 
     getFileNameAndFormat(fileName: string, format: string) {
@@ -34,18 +36,17 @@ export class UtilsService {
     }
 
     createTheme() {
-        container
-            .resolve(PromptService)
+        this.promptService
             .createTemplate()
             .run()
-            .then((answer) => {
+            .then((answer: any) => {
                 this.initMainTemplate(JSON.parse(answer.result));
             })
             .catch(console.error);
     }
 
     initMainTemplate(packageConfig: any) {
-        const targetPath = `${process.cwd()}/${packageConfig.name}`;
+        const targetPath = `${Deno.cwd()}/${packageConfig.name}`;
         const sourceTheme = `${appRoot}/themes/kcv-theme-main`;
         fse.copySync(sourceTheme, `${targetPath}`, { overwrite: true });
 
@@ -59,8 +60,6 @@ export class UtilsService {
         editPackage.set('repository', packageConfig.repository);
         editPackage.set('license', packageConfig.license);
         editPackage.save();
-
-        process.exit();
     }
 
     extractFileFormat(fileName: string) {
@@ -72,29 +71,30 @@ export class UtilsService {
     }
 
     initResume() {
-        fs.writeFileSync(`${appRoot}/resume.json`, require(`${appRoot}/jsonresume.json`));
+        Deno.writeFileSync(`${appRoot}/resume.json`, Deno.readFileSync(`${appRoot}/jsonresume.json`));
     }
 
-    findThemes(searchPath: string = './'): ThemePathModel[] {
+    findThemes(searchPath: string = './'): ThemePathModel[] | undefined {
         try {
             const files = FileHound.create().depth(2).path(searchPath).match('package.json').findSync();
             return files
-                .filter((path) => {
+                .filter((path: string) => {
                     try {
-                        return JSON.parse(fs.readFileSync(path)).name?.includes('kcv-theme');
+                        return JSON.parse(Deno.readFileSync(path).toString()).name?.includes('kcv-theme');
                     } catch (e) {
                         return false;
                     }
                 })
-                .map((path) => {
+                .map((path: string) => {
                     const absolutePath = path.replace('/package.json', '');
                     return {
-                        name: JSON.parse(fs.readFileSync(path)).name,
+                        name: JSON.parse(Deno.readFileSync(path).toString()).name,
                         path: absolutePath,
                     } as ThemePathModel;
                 });
         } catch (e) {
             console.log(`Invalid path: ${e.message}`);
+            return undefined;
         }
     }
 
