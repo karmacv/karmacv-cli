@@ -1,105 +1,91 @@
 import { Service, Inject } from 'https://deno.land/x/mandarinets@v2.3.2/mod.ts';
 import { cheerio } from 'https://deno.land/x/cheerio@1.0.4/mod.ts';
 import logSymbols from 'https://cdn.skypack.dev/log-symbols';
+import inlineCss from 'https://cdn.skypack.dev/inline-css';
+import htmlToDocxBuffer from 'https://cdn.skypack.dev/html-to-docx-buffer';
+import convertHTMLToPDF from 'https://cdn.skypack.dev/pdf-puppeteer';
 
 @Service()
 export class CompileService {
 
-    compileHTML(): Promise<any> {
-        const themePkg = ''; // TODO
-        const jsonResume = ''; // TODO
+    compileHTML(): Promise<string> {
+        const that = this;
         const appRoot = '';
-        return new Promise(function(resolve, reject) {
+        return new Promise(async function(resolve, reject) {
             try {
-                const themeModule = themePkg;
-                const jsonData = jsonResume;
-                const render = {} as any; // themeModule.render;
+                const themeModule = that.themePkg;
+                const jsonData = that.jsonResume;
+                const render = themeModule.render;
                 let renderedHTML = render(jsonData);
+
                 renderedHTML = renderedHTML.replace('href="//', 'href="http://');
                 renderedHTML = renderedHTML.replace('src="//', 'src="http://');
                 const $renderedDOM = cheerio.load(renderedHTML);
                 const $head = $renderedDOM('head');
                 const injectableJS = Deno.readFileSync(`${appRoot}/server/middleware/client-side.html`).toString();
                 $head.append(injectableJS);
-                resolve($renderedDOM.html());
+                
+                renderedHTML = $renderedDOM.html();
+
+                const inlinedHTML = await inlineCss(renderedHTML, {
+                    removeHtmlSelectors: true,
+                    removeStyleTags: true,
+                    url: './',
+                }) as string;
+
+                resolve(inlinedHTML);
             } catch (e) {
-                const errorMsg = `couldn't render package ${themePkg}`;
+                const errorMsg = `couldn't render package ${that.themePkg}`;
                 console.log(logSymbols.error, errorMsg);
                 reject(errorMsg);
             }
         });
-            // concatMap((renderedHTML) => {
-            //     return fromPromise(
-            //         inlineCss(renderedHTML, {
-            //             removeHtmlSelectors: true,
-            //             removeStyleTags: true,
-            //             url: './',
-            //         })
-            //     );
-            // }),
-            // map((inlineHTML) => {
-            //     return inlineHTML;
-            // }),
-            // catchError((error) => {
-            //     const errorMsg = `couldn't render package ${this.themePkg}: ${error}`;
-            //     console.log(logSymbols.error, errorMsg);
-            //     return throwError(error);
-            // })
     }
     
     compileDocx() {
-        // return new Observable((subject) => {
-        //     try {
-        //         this.compileHTML().subscribe(async (html) => {
-        //             // @ts-ignore
-        //             const fileBuffer = await HTMLtoDOCX(html, null, { table: { row: { cantSplit: true } } });
-        //             subject.next(fileBuffer);
-        //         });
-        //     } catch (e) {
-        //         const errorMsg = `couldn't render package ${this.themePkg}: ${e}`;
-        //         console.log(logSymbols.error, errorMsg);
-        //         subject.error(errorMsg);
-        //     }
-        // });
+        return this.compileHTML().then((html) => {
+            return htmlToDocxBuffer(html, null, { table: { row: { cantSplit: true } } }, undefined);
+        }).catch(error => {
+            const errorMsg = `couldn't render package ${this.themePkg}: ${error}`;
+            console.log(logSymbols.error, errorMsg);
+        });
     }
     
     compilePDF() {
-        // return new Observable((subject) => {
-        //     try {
-        //         const convertParameter = {
-        //             displayHeaderFooter: true,
-        //             format: 'A4',
-        //         } as any;
-        //         this.compileHTML().subscribe((html) => {
-        //             convertHTMLToPDF(
-        //                 html,
-        //                 (pdf) => {
-        //                     subject.next(pdf);
-        //                 },
-        //                 convertParameter
-        //             );
-        //         });
-        //     } catch (e) {
-        //         const errorMsg = `couldn't render package ${this.themePkg}: ${e}`;
-        //         console.log(logSymbols.error, errorMsg);
-        //         subject.error(errorMsg);
-        //     }
-        // });
+        const convertParameter = {
+            displayHeaderFooter: true,
+            format: 'A4',
+        } as any;
+        const that = this;
+        return new Promise(function(resolve, reject) {
+            that.compileHTML().then(async (compiledHTML) => {
+                // resolved via callback
+                await convertHTMLToPDF(
+                    compiledHTML,
+                            (pdf: any) => {
+                                resolve(pdf);
+                            },
+                            convertParameter
+                        );   
+            })
+
+        }).catch((error) => {
+            const errorMsg = `couldn't render package ${this.themePkg}: ${error}`;
+            console.log(logSymbols.error, errorMsg);
+        });
     }
     
     get themePkg(): any {
-        return null;
-        // try {
-        //     const themePath = this.configService.themePath;
-        //     return require(`${themePath}/index.js`);
-        // } catch (err) {
-        //     console.log(`No theme found in the current folder. Cause: ${err}`);
-        //     process.exit();
-        // }
+        try {
+            const themePath = this.configService.themePath;
+            return require(`${themePath}/index.js`);
+        } catch (err) {
+            console.log(`No theme found in the current folder. Cause: ${err}`);
+            process.exit();
+        }
     }
     
     get jsonResume(): string {
-        // return JSON.parse(Deno.readFileSync(`${appRoot}/resume.json`).toString());
-        return '';
+        return JSON.parse(Deno.readFileSync(`${appRoot}/resume.json`).toString());
     }
 }
