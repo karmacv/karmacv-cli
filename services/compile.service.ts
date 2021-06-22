@@ -1,9 +1,7 @@
-import { Service, Inject } from 'https://deno.land/x/mandarinets@v2.3.2/mod.ts';
+import { Service } from 'https://deno.land/x/mandarinets@v2.3.2/mod.ts';
 import { cheerio } from 'https://deno.land/x/cheerio@1.0.4/mod.ts';
 import logSymbols from 'https://cdn.skypack.dev/log-symbols';
-import inlineCss from 'https://cdn.skypack.dev/inline-css';
-import htmlToDocxBuffer from 'https://cdn.skypack.dev/html-to-docx-buffer';
-import convertHTMLToPDF from 'https://cdn.skypack.dev/pdf-puppeteer';
+import puppeteer from "https://deno.land/x/puppeteer@9.0.1/mod.ts";
 import { ConfigService } from "./config.service.ts";
 
 @Service()
@@ -30,13 +28,7 @@ export class CompileService {
                 
                 renderedHTML = $renderedDOM.html();
 
-                const inlinedHTML = await inlineCss(renderedHTML, {
-                    removeHtmlSelectors: true,
-                    removeStyleTags: true,
-                    url: './',
-                }) as string;
-
-                resolve(inlinedHTML);
+                resolve(renderedHTML);
             } catch (e) {
                 const errorMsg = `couldn't render package ${that.themePkg}`;
                 console.log(logSymbols.error, errorMsg);
@@ -45,16 +37,16 @@ export class CompileService {
         });
     }
     
-    compileDocx() {
-        return this.compileHTML().then((html) => {
-            return htmlToDocxBuffer(html, null, { table: { row: { cantSplit: true } } }, undefined);
-        }).catch(error => {
-            const errorMsg = `couldn't render package ${this.themePkg}: ${error}`;
-            console.log(logSymbols.error, errorMsg);
-        });
-    }
+    // compileDocx() {
+    //     return this.compileHTML().then((html) => {
+    //         return htmlToDocxBuffer(html, null, { table: { row: { cantSplit: true } } }, undefined);
+    //     }).catch(error => {
+    //         const errorMsg = `couldn't render package ${this.themePkg}: ${error}`;
+    //         console.log(logSymbols.error, errorMsg);
+    //     });
+    // }
     
-    compilePDF() {
+    compilePDF(): Promise<any> {
         const convertParameter = {
             displayHeaderFooter: true,
             format: 'A4',
@@ -62,16 +54,13 @@ export class CompileService {
         const that = this;
         return new Promise(function(resolve, reject) {
             that.compileHTML().then(async (compiledHTML) => {
-                // resolved via callback
-                await convertHTMLToPDF(
-                    compiledHTML,
-                            (pdf: any) => {
-                                resolve(pdf);
-                            },
-                            convertParameter
-                        );   
+                const browser = await puppeteer.launch();
+                const page = await browser.newPage();
+                await page.setContent(compiledHTML);
+                const result = await page.pdf();
+                await browser.close();
+                resolve(result);
             })
-
         }).catch((error) => {
             const errorMsg = `couldn't render package ${this.themePkg}: ${error}`;
             console.log(logSymbols.error, errorMsg);
