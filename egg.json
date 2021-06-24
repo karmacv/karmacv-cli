@@ -1,0 +1,17 @@
+{
+  "$schema": "https://x.nest.land/eggs@0.3.8/src/schema.json",
+  "name": "resumerise-cli",
+  "entry": "./mod.ts",
+  "description": "CLI for resumerise",
+  "homepage": "https://resumerise.com",
+  "version": "0.0.1",
+  "releaseType": "minor",
+  "unstable": false,
+  "unlisted": true,
+  "files": [],
+  "ignore": ['.nvmrc', '.prettierignore', '.prettierrc', '.vscode'],
+  "checkFormat": false,
+  "checkTests": false,
+  "checkInstallation": false,
+  "check": true
+}
