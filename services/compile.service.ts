@@ -1,7 +1,9 @@
-import { cheerio } from 'https://deno.land/x/cheerio@1.0.4/mod.ts';
 import logSymbols from 'https://cdn.skypack.dev/log-symbols';
-import puppeteer from "https://deno.land/x/puppeteer@9.0.1/mod.ts";
 import { ConfigService } from "./config.service.ts";
+import generate from 'https://x.nest.land/denoname@0.8.2/mod.ts';
+import * as eta from 'https://deno.land/x/eta@v1.6.0/mod.ts';
+import htmlToDocxBuffer from 'https://cdn.skypack.dev/html-to-docx-buffer';
+const { dirname } = generate(import.meta);
 export class CompileService {
 
     private readonly configService: ConfigService;
@@ -10,51 +12,37 @@ export class CompileService {
         this.configService = new ConfigService();
     }
 
-    compileHTML(): Promise<string> {
-        const that = this;
-        const appRoot = '';
-        return new Promise(async function(resolve, reject) {
-            try {
-                const themeModule = await that.themePkg;
-                console.log(themeModule);
-                // const jsonData = that.jsonResume;
-                let renderedHTML = await themeModule.render(Deno.readTextFileSync('../resume.json'));
-
-                // renderedHTML = renderedHTML.replace('href="//', 'href="http://');
-                // renderedHTML = renderedHTML.replace('src="//', 'src="http://');
-                // const $renderedDOM = cheerio.load(renderedHTML);
-                // const $head = $renderedDOM('head');
-                // const injectableJS = Deno.readFileSync(`${appRoot}/server/middleware/client-side.html`).toString();
-                // $head.append(injectableJS);
-                
-                // renderedHTML = $renderedDOM.html();
-
-                resolve(renderedHTML);
-            } catch (e) {
-                const errorMsg = `couldn't render HTML ${e}`;
-                console.log(logSymbols.error, errorMsg);
+    async compileHTML(themePath: string, json: string, type: string): Promise<string> {
+        try {
+            const themeModule = await this.getThemePkg(themePath);
+            let renderedHTML = await themeModule.render(json, type);
+            renderedHTML = await this.embedRenderedHTML(renderedHTML, 'test');
+            return renderedHTML;
+        } catch (e) {
+            const errorMsg = `couldn't render HTML ${e}`;
+            console.log(logSymbols.error, errorMsg);
+            return new Promise(function(_, reject) {
                 reject(errorMsg);
-            }
+            });
+        }
+    }
+    
+    compileDocx(themePath: string, json: string) {
+        return this.compileHTML(themePath, json, 'PDF').then((html) => {
+            return htmlToDocxBuffer(html, null, { table: { row: { cantSplit: true } } }, undefined);
+        }).catch(error => {
+            const errorMsg = `couldn't render package ${themePath}: ${error}`;
+            console.log(logSymbols.error, errorMsg);
         });
     }
     
-    // compileDocx() {
-    //     return this.compileHTML().then((html) => {
-    //         return htmlToDocxBuffer(html, null, { table: { row: { cantSplit: true } } }, undefined);
-    //     }).catch(error => {
-    //         const errorMsg = `couldn't render package ${this.themePkg}: ${error}`;
-    //         console.log(logSymbols.error, errorMsg);
-    //     });
-    // }
-    
-    compilePDF(): Promise<any> {
+    compilePDF(themePath: string, json: string): Promise<any> {
         const convertParameter = {
             displayHeaderFooter: true,
             format: 'A4',
-        } as any;
-        const that = this;
+        };
         return new Promise(function(resolve, reject) {
-            that.compileHTML().then(async (compiledHTML) => {
+            that.compileHTML(themePath, json, 'PDF').then(async (compiledHTML) => {
                 const browser = await puppeteer.launch();
                 const page = await browser.newPage();
                 await page.setContent(compiledHTML);
@@ -63,18 +51,17 @@ export class CompileService {
                 resolve(result);
             })
         }).catch((error) => {
-            const errorMsg = `couldn't render package ${this.themePkg}: ${error}`;
+            const errorMsg = `couldn't render package ${themePath}`;
             console.log(logSymbols.error, errorMsg);
         });
     }
     
-    get themePkg(): Promise<any> {
+    getThemePkg(themePath: string): Promise<any> {
         try {
-            this.configService.denoModuleUrl = '/Users/emarku/Projekte/resumerise/resumerise-theme-retro/mod.ts';
-            return import(this.configService.denoModuleUrl);
+            return import(themePath);
         } catch (err) {
-            console.log(`No theme found in the current folder. Cause: ${err}`);
-            return new Promise(function(resolve, reject) {
+            console.log(`Error while import theme ${themePath}. Reason: ${err}`);
+            return new Promise(function(_, reject) {
                 reject(err);
             });
         }
@@ -82,5 +69,13 @@ export class CompileService {
     
     get jsonResume(): string {
         return JSON.parse(Deno.readFileSync(`./resume.json`).toString());
+    }
+
+    embedRenderedHTML(renderedHTML: string, title: string): string | Promise<string> | void {
+        var mainLayout = Deno.readTextFileSync(`/${dirname}/../server/templates/layout.eta`);
+        return eta.render(mainLayout, {
+            content: renderedHTML,
+            title: title
+        });
     }
 }

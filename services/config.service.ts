@@ -1,3 +1,3 @@
 export class ConfigService {
-    denoModuleUrl!: string;
+    static modulePath: string;
 }

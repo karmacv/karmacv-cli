@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= it.title %></title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.js"
+		integrity="sha512-+l9L4lMTFNy3dEglQpprf7jQBhQsQ3/WvOnjaN/+/L4i0jOstgScV0q2TjfvRF4V+ZePMDuZYIQtg5T4MKr+MQ=="
+		crossOrigin="anonymous">
+	</script>
+	<script>
+		var socket = io();
+		socket.on('refreshPage', (msg) => {
+			location.reload();
+		});
+	</script>
+	<style>
+		.theme-types {
+			background-color: #9AB6FE;
+			border-radius: 10px;
+			width: 25px;
+			align-items: center;
+  			justify-content: center;
+			border: 1px solid #376DFB;
+			position: fixed;
+			bottom: 50px;
+			left: 50px;
+			display: flex;
+			flex-direction: column;
+			padding: 5px;
+			color: #fff;
+		}
+	</style>
+  </head>
+  <body>
+    <%~ it.content %>
+	<div class="theme-type">
+		<div class="theme-type__desktop">
+			<a href="?type=WEB">
+				<i class="fas fa-desktop"></i>
+			</a>
+		</div>
+		<div class="theme-type__mobile"
+			<a href="?type=MOBILE">
+				<i class="fas fa-mobile-alt"></i>
+			</a>
+		</div>
+	</div>
+  </body>
+</html>
