@@ -1,19 +1,31 @@
 import { opine } from "https://deno.land/x/opine@1.5.3/mod.ts";
-import { CompileService } from "../services/compile.service.ts";
 import { ConfigService } from "../services/config.service.ts";
-import generate from 'https://x.nest.land/denoname@0.8.2/mod.ts';
-const { dirname } = generate(import.meta);
+import {
+  compileHTML,
+  compilePDF,
+  getDefaultResume,
+} from "../../resumerise-theme-library/mod.ts";
+import { DocType } from "../../resumerise-theme-library/models/doc-type.model.ts";
 
 const app = opine();
-const compileService = new CompileService();
 
-app.get("/html", async function(req, res) {
-    const jsonResume = Deno.readTextFileSync(`/${dirname}/../resume.json`);
-    return res.send(await compileService.compileHTML(ConfigService.modulePath, jsonResume, req.params.type));
+app.get("/html", async function (req, res) {
+  return res.send(
+    await compileHTML(
+      ConfigService.modulePath,
+      getDefaultResume(),
+      req.params.type as DocType,
+    ),
+  );
 });
 
-app.get("/html", async function(req, res) {
-    return res.send(await compileService.compilePDF());
+app.get("/pdf", async function (_, res) {
+  return res.send(
+    await compilePDF(
+      ConfigService.modulePath,
+      getDefaultResume(),
+    ),
+  );
 });
 
 export default app;
