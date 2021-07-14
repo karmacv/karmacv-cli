@@ -1,4 +1,5 @@
 export enum DocType {
-    'PDF' = 'PDF',
-    'HTML' = 'HTML',
+  "PDF" = "PDF",
+  "HTML" = "HTML",
+  "MOBILE" = "MOBILE",
 }
