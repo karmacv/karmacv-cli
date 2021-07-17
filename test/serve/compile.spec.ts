@@ -1,12 +1,11 @@
 import 'reflect-metadata';
-
+import { superoak } from "https://deno.land/x/superoak@4.3.0/mod.ts";
 import * as appRoot from 'app-root-path';
 import { container } from 'tsyringe';
 
 import { ExpressApp } from '../../server/express.app';
 import { CompileController } from '../../server/middleware/compile-controller';
 import { UtilsService } from '../../services/utils.service';
-const request = require('supertest');
 
 describe('Rendered HTML document', () => {
     let expressApp: ExpressApp;
